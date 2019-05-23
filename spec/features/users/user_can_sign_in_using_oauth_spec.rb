@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'User can log in using OAuth' do
   context 'As a user who clicks on the Log In button' do
-    it 'allows me the option to log in using OAuth with a google account' do
+    xit 'allows me the option to log in using OAuth with a google account' do
 
       visit root_path
 

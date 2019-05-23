@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <div class="flash-message">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: name %>
+      <% end %>
+    </div>
+    
+    <section class="nav-bar">
+      <%= link_to "Log In", login_path %>
+    </section>
+
     <%= yield %>
   </body>
 </html>

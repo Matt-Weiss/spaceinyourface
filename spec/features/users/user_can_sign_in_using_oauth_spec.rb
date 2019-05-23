@@ -26,7 +26,7 @@ describe 'User can log in using OAuth' do
             }}
         OmniAuth.config.mock_auth[:google_oauth2] = mock_auth_hash
 
-      click_on "Sign In Using Google"
+      click_button "Sign In Using Google"
       # OAuth happens
       expect(current_path).to eq(root_path)
 

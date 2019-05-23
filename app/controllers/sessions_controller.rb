@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
 
   private
 
+  #not currently implemented code. auth_hash does work however and will be used when creating a user from OAuth
   def create_user_from_oauth
     user = User.find_or_create_by(email: auth_hash['email'])
   end

@@ -1,1 +1,18 @@
-<p><%= link_to "Sign In Using Google", '/auth/google_oauth2'%></p>
+<h4>Log In Page</h4>
+
+<section class='login-form'>
+  <%= form_for :session do |f| %>
+    <div>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <%= f.submit 'Log In' %>
+  <% end %>
+</section>
+
+
+<p><%= button_to "Sign In Using Google", '/auth/google_oauth2'%></p>

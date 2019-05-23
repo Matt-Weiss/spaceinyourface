@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
 gem 'rails', '~> 5.2.3'
-gem 'sqlite3'
 gem 'puma', '~> 3.11'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -15,13 +14,12 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'active_model_serializers'
 gem 'attr_encrypted', '~> 3.1.0'
-gem 'factory_bot_rails'
-gem 'faker'
 gem 'faraday'
 gem 'figaro'
 gem 'google-api-client'
 gem 'jquery'
 gem 'omniauth-google-oauth2'
+gem 'pg'
 
 
 group :development, :test do
@@ -31,6 +29,8 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'foundation-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'launchy'
   gem 'pry'
   gem 'rspec-rails'

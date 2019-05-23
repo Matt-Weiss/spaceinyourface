@@ -8,9 +8,6 @@ describe 'User can log in using OAuth' do
 
       click_on "Log In"
       expect(current_path).to eq(login_path)
-      # https://github.com/zquestz/omniauth-google-oauth2
-      # https://medium.com/@jalena.marie.taylor/getting-started-with-omniauth-1f3924e783ea
-      # want email and token
 
         OmniAuth.config.test_mode = true
           mock_auth_hash = {

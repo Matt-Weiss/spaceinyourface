@@ -4,16 +4,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if auth_hash
-      create_user_from_oauth
-      # log in
-      binding.pry
-    else
-    # binding.pry
-    end
+    user = User.find_by(email: params[:email])
+  
     flash[:success] = "Successfully logged in!"
     redirect_to root_path
-    # request.env['omniauth.auth']
   end
 
   def delete

@@ -9,26 +9,31 @@ describe 'User can log in using OAuth' do
       click_on "Log In"
       expect(current_path).to eq(login_path)
       # https://github.com/zquestz/omniauth-google-oauth2
+      # https://medium.com/@jalena.marie.taylor/getting-started-with-omniauth-1f3924e783ea
       # want email and token
 
-
-        # OmniAuth.config.test_mode = true
-        # mock_auth_hash = { 'provider' => 'google',
-        #              'uid' => '123',
-        #              'info' => {},
-        #              'credentials' => { 'token' => '123456', 'expires' => false },
-        #              'extra' => {} }
-        # OmniAuth.config.mock_auth[:github] = mock_auth_hash
+        OmniAuth.config.test_mode = true
+          mock_auth_hash = {
+            "provider"=>"google_oauth2",
+            "uid"=>"12345",
+            "info"=> {
+              "name"=>"Sammy Space",
+              "email"=>"sammyspace@gmail.com",
+            "credentials"=> {
+              "token"=>"ya29.GlsSB73c7E1WrSlnJ3qJAlhf_RCWJQkGeUYtt15kaUeM2sX3TRIMH3ql5lWKV9QlEeG1nPtu-96YEJePSOOoLzJ5cF9b_frlINfmXLxYHBKuLPMi8TvZOwN-0Fhb",
+              "expires_at"=>1558570259,
+              "expires"=>true}
+            }}
+        OmniAuth.config.mock_auth[:google_oauth2] = mock_auth_hash
 
       click_on "Sign In Using Google"
-
+      # OAuth happens
       expect(current_path).to eq(root_path)
 
-      # expect(@user.git_id).to eq(123)
-      # expect(@user.git_key).to eq("123456")
-
+      user = User.last
+      expect(user.name).to eq("Sammy Space")
+      expect(user.email).to eq("sammyspace@gmail.com")
       expect(page).to have_content('Successfully logged in!')
-
     end
   end
 end

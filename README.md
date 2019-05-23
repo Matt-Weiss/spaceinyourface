@@ -1,4 +1,13 @@
-# README
+# Space In Your Face
+
+## Getting Set up
+```
+$ git clone git@github.com:Matt-Weiss/spaceinyourface.git
+$ bundle update
+$ bundle install
+$ rake db:{create,migrate,seed}
+$ rails s
+```
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

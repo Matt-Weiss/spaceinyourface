@@ -17,7 +17,7 @@ describe 'User can log in using OAuth' do
               "name"=>"Sammy Space",
               "email"=>"sammyspace@gmail.com"},
             "credentials"=> {
-              "token"=>"HBKuLPMi8TvZOb",
+              "token"=>"FakeToken1",
               "expires_at"=>1558570259,
               "expires"=>true}
             }
@@ -28,9 +28,10 @@ describe 'User can log in using OAuth' do
       expect(current_path).to eq(root_path)
 
       user = User.last
-
+        
       expect(user.user_name).to eq("sammyspace")
       expect(user.email).to eq("sammyspace@gmail.com")
+      expect(user.google_token).to eq("FakeToken1")
       expect(page).to have_content('Successfully logged in!')
     end
   end

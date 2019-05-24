@@ -1,9 +1,8 @@
 a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color:  #37CBDC;
   display: flex;
   justify-content: center;
-
   padding-bottom: .5rem;
   text-decoration: none;
 }
@@ -15,118 +14,104 @@ img {
 }
 
 #rectangle a {
-  padding-left: 3rem;
+  padding-left: 1rem;
+}
+.nav_container {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  background: #010101;
+  height: 35vh;
+  z-index: -1;
+  opacity: .8;
+  border: solid #37CBDC;
 }
 
 .nav_bar {
-      overflow: hidden;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      // height: 45%;
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 1;
-    }
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 .upper_ship_nav_dash {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-}
-
-.main_body_of_nav_bar {
-      width: 100%;
-      height: 27vh;
-      background: #4E5C5D;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      background-size: 100% 100%;
-}
-
-.bottomright {
-      display: flex;
-      flex-direction: row;
-}
-
-.bottomleft {
-      display: flex;
-      flex-direction: row;
-}
-.calander {
-  padding-right: 1rem;
-}
-
-.user_feature_bar {
-  width: 35%;
-  height: 37vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.main_body_of_nav_bar {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-size: 100% 100%;
+}
+
+.user_info {
+  font-size: 1.75rem;
+  color:  #37CBDC;
+  width: 15rem;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: url('https://i.imgur.com/MSO404s.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+#display {
+  width: 14rem;
+  height: 9rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
-.user_feature_bar a {
-  padding-bottom: 0;
-}
 #kits {
-  width: 30%;
-  height: 70%;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('circle1.png');
+  background: url('https://i.imgur.com/XZWEZ9j.png');
   background-size: 100% 100%;
 }
+
 #inst {
-  width: 30%;
-  height: 70%;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('circle3.png');
+  background: url('https://i.imgur.com/WMO2KOZ.png');
   background-size: 100% 100%;
-  background-color: #4E5C5D;
 }
 
 #new_search{
-  width: 30%;
-  height: 70%;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url('circle2.png');
+  background: url('https://i.imgur.com/7wv29nt.png');
   background-size: 100% 100%;
 }
 
-
 #rectangle {
-  width: 20rem;
-  height: 10rem;
-  background: #333333;
+  width: 11rem;
+  height: 5.5rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background: url("path_selector.png") no-repeat;
+  background: url("https://i.imgur.com/hOpD52p.png") no-repeat;
   background-size: 100% 100%;
-  background-color: #4E5C5D;
-  // object-fit: cover;
 }
-
-#triangle-bottomright {
-      width: 0;
-      height: 0;
-      border-bottom: 10rem solid #4E5C5D;
-      border-left: 10rem solid transparent;
-    }
-
-#triangle-bottomleft {
-      width: 0;
-      height: 0;
-      border-bottom: 10rem solid #4E5C5D;
-      border-right: 10rem solid transparent;
-    }

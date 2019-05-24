@@ -2,11 +2,11 @@
   <section class="upper_ship_nav_dash">
       <% if current_user.nil? %>
       <div class='login' id="rectangle">
-        <%= link_to 'Log In', login_path%>
+        <%= link_to 'Log In', login_path %>
       </div>
       <% else %>
       <div class='logout' id="rectangle">
-        <%= link_to 'Log Out', logout_path%>
+        <%= link_to 'Log Out', logout_path, method: :delete %>
       </div>
       <% end %>
       <div class="user_info">
@@ -25,7 +25,7 @@
   <section class="main_body_of_nav_bar">
     <% if current_user.nil? %>
     <div class='register' id="rectangle">
-      <%= link_to 'Register', register_path%>
+      <%= link_to 'Register', new_user_path%>
     </div>
     <div id="kits">
     </div>

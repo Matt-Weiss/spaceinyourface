@@ -1,0 +1,38 @@
+.new_user {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+}
+h4 {
+  font-size: 1.75rem;
+  color:  #37CBDC;
+  display: flex;
+  justify-content: center;
+}
+
+.registration-form #label{
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+
+.registration-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fields {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+
+#field {
+  margin: 0rem 1rem;
+}
+
+#submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

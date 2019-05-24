@@ -1,22 +1,26 @@
 <h4>Register</h4>
 <section class="registration-form">
   <%= form_for @user do |f| %>
-    <div>
-      <p><%= f.label :user_name, "User Name"  %></p>
-      <p><%= f.text_field :user_name %></p>
+    <div id='fields'>
+      <div>
+        <p id='label'><%= f.label :user_name, "User Name" %></p>
+        <p id='field'><%= f.text_field :user_name %></p>
+      </div>
+      <div >
+        <p id='label'><%= f.label :email  %></p>
+        <p id='field'><%= f.email_field :email %></p>
+      </div>
     </div>
-    <div>
-      <p><%= f.label :email  %></p>
-      <p><%= f.email_field :email %></p>
+    <div id='fields'>
+      <div>
+        <p id='label'><%= f.label :password  %></p>
+        <p id='field'><%= f.password_field :password %></p>
+      </div>
+      <div>
+        <p id='label'><%= f.label :password_confirmation, "Password Confirmation" %></p>
+        <p id='field'><%= f.password_field :password_confirmation %></p>
+      </div>
     </div>
-    <div>
-      <p><%= f.label :password  %></p>
-      <p><%= f.password_field :password %></p>
-    </div>
-    <div>
-      <p><%= f.label :password_confirmation, "Password Confirmation"  %></p>
-      <p><%= f.password_field :password_confirmation %></p>
-    </div>
-      <p><%= f.submit 'Create Account' %></p>
+      <p id='submit'><%= f.submit 'Create Account' %></p>
     <% end %>
 </section>

@@ -31,7 +31,12 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
-SimpleCov.start 'rails'
+SimpleCov.start 'rails' do
+  add_filter '/channels/'
+  add_filter '/jobs/'
+  add_filter '/mailers/'
+  add_filter '/helpers/'
+end
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|

@@ -1,6 +1,7 @@
 <h4>Log In Page</h4>
 
 <section class='login-form'>
+  <div class="transbox">
   <%= form_for :session do |f| %>
     <div>
       <p id='label'><%= f.label :email %></p>
@@ -13,5 +14,6 @@
     <p id='submit'><%= f.submit 'Log In' %></p>
   <% end %>
 
-<%= button_to "Sign In Using Google", '/auth/google_oauth2'%>
+  <%= button_to "Sign In Using Google", '/auth/google_oauth2'%>
+  </div>
 </section>

@@ -14,7 +14,7 @@ img {
 }
 
 #rectangle a {
-  padding-left: 3rem;
+  padding-left: 1rem;
 }
 .nav_container {
   width: 100%;
@@ -22,9 +22,9 @@ img {
   position: fixed;
   bottom: 0;
   background: #010101;
-  height: 47vh;
+  height: 35vh;
   z-index: -1;
-  opacity: .85;
+  opacity: .8;
   border: solid #37CBDC;
 }
 
@@ -40,13 +40,13 @@ img {
 .upper_ship_nav_dash {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .main_body_of_nav_bar {
-  height: 25vh;
+  height: 15vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-size: 100% 100%;
 }
@@ -54,8 +54,8 @@ img {
 .user_info {
   font-size: 1.75rem;
   color:  #37CBDC;
-  width: 20rem;
-  height: 10rem;
+  width: 15rem;
+  height: 7.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -74,8 +74,8 @@ img {
 }
 
 #kits {
-  width: 9rem;
-  height: 9rem;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,8 +84,8 @@ img {
 }
 
 #inst {
-  width: 9rem;
-  height: 9rem;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,8 +94,8 @@ img {
 }
 
 #new_search{
-  width: 9rem;
-  height: 9rem;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -106,8 +106,8 @@ img {
 }
 
 #rectangle {
-  width: 20rem;
-  height: 10rem;
+  width: 11rem;
+  height: 5.5rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

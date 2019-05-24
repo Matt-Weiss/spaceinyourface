@@ -11,15 +11,15 @@
       <% end %>
       <div class="user_info">
         <section id='display'>
-          <% if current_user != nil %>
-          <%= current_user.user_name %>
-          <% else %>
+          <% if current_user.nil? %>
           <%= 'Visitor' %>
+          <% else %>
+          <%= current_user.user_name %>
           <% end %>
         </section>
       </div>
-      <div class='calendar' id="rectangle">
-        <%= link_to 'Calendar'%>
+      <div class='home' id="rectangle">
+        <%= link_to 'Home', root_path %>
       </div>
   </section>
   <section class="main_body_of_nav_bar">

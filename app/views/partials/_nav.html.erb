@@ -1,39 +1,53 @@
 <div class="nav_bar" >
   <section class="upper_ship_nav_dash">
-    <section class="bottomleft">
-      <div id="rectangle">
-        <%= link_to 'Log In', login_path %>
+      <% if current_user.nil? %>
+      <div class='login' id="rectangle">
+        <%= link_to 'Log In', login_path%>
       </div>
-      <div id="triangle-bottomleft">
-
+      <% else %>
+      <div class='logout' id="rectangle">
+        <%= link_to 'Log Out', logout_path%>
       </div>
-    </section>
-    <section class="bottomright">
-      <div id="triangle-bottomright">
-
+      <% end %>
+      <div class="user_info">
+        <section id='display'>
+          <% if current_user.nil? %>
+          <%= 'Visitor' %>
+          <% else %>
+          <%= current_user.user_name %>
+          <% end %>
+        </section>
       </div>
-      <div id="rectangle">
-        <%= link_to 'Register', new_user_path %>
+      <div class='home' id="rectangle">
+        <%= link_to 'Home', root_path %>
       </div>
-    </section>
   </section>
   <section class="main_body_of_nav_bar">
-    <div id="rectangle">
-      <%= link_to 'Calendar'%>
+    <% if current_user.nil? %>
+    <div class='register' id="rectangle">
+      <%= link_to 'Register', register_path%>
     </div>
-    <div class="user_feature_bar">
-      <div id="kits">
-        <%= link_to 'Kits'%>
-      </div>
-      <div id="inst">
-        <%= link_to 'Inst.'%>
-      </div>
-      <div id="new_search">
-        <%= link_to 'New Search'%>
-      </div>
+    <div id="kits">
     </div>
-    <div id="rectangle">
+    <div id="inst">
+    </div>
+    <div id="new_search">
+    </div>
+    <% else %>
+    <div id="kits">
+      <%= link_to 'Kits'%>
+    </div>
+    <div id="inst">
+      <%= link_to 'Inst.'%>
+    </div>
+    <div id="new_search">
+      <%= link_to 'New Search'%>
+    </div>
+    <% end %>
+    <div class='about' id="rectangle">
       <%= link_to 'About'%>
     </div>
   </section>
+</div>
+<div class="nav_container">
 </div>

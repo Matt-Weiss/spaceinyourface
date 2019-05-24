@@ -28,7 +28,7 @@ describe 'User can log in using OAuth' do
       expect(current_path).to eq(root_path)
 
       user = User.last
-      # binding.pry
+
       expect(user.user_name).to eq("sammyspace")
       expect(user.email).to eq("sammyspace@gmail.com")
       expect(page).to have_content('Successfully logged in!')

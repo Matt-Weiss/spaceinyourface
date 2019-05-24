@@ -3,16 +3,15 @@
 <section class='login-form'>
   <%= form_for :session do |f| %>
     <div>
-      <%= f.label :email %>
-      <%= f.email_field :email %>
+      <p id='label'><%= f.label :email %></p>
+      <p id='field'><%= f.email_field :email %></p>
     </div>
     <div>
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+      <p id='label'><%= f.label :password %></p>
+      <p id='field'><%= f.password_field :password %></p>
     </div>
-    <%= f.submit 'Log In' %>
+    <p id='submit'><%= f.submit 'Log In' %></p>
   <% end %>
+
+<%= button_to "Sign In Using Google", '/auth/google_oauth2'%>
 </section>
-
-
-<p><%= button_to "Sign In Using Google", '/auth/google_oauth2'%></p>

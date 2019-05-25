@@ -8,7 +8,7 @@ describe 'As a visitor' do
     end
 
     it 'brings me to a registration page with a form which I can fill out' do
-      expect(current_path).to eq(register_path)
+      expect(current_path).to eq(new_user_path)
 
       fill_in 'user[user_name]', with: 'SpaceCadet'
       fill_in 'user[email]', with: 'spacecadet@email.com'
@@ -26,7 +26,7 @@ describe 'As a visitor' do
     end
 
     it 'notifies me of any info errors, and autofills my form with previous answers' do
-      expect(current_path).to eq(register_path)
+      expect(current_path).to eq(new_user_path)
 
       fill_in 'user[password]', with: 'password'
       fill_in 'user[password_confirmation]', with: 'password'

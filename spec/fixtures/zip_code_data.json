@@ -1,0 +1,14 @@
+{
+    "zip_code": "80202",
+    "lat": 39.751926,
+    "lng": -104.997384,
+    "city": "Denver",
+    "state": "CO",
+    "timezone": {
+        "timezone_identifier": "America/Denver",
+        "timezone_abbr": "MDT",
+        "utc_offset_sec": -21600,
+        "is_dst": "T"
+    },
+    "acceptable_city_names": []
+}

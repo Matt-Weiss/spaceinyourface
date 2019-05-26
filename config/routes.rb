@@ -3,13 +3,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users, only: [:new, :create]
-  resources :search, only: [:new, :index]
+  resources :search, only: [:index, :new]
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
-  get '/register', to: 'users#new', as: :register
-  post '/register', to: 'users#create'
 
   get '/o/oauth2/auth', to: 'sessions#create'
   get 'auth/google_oauth2/callback', to: 'sessions#create'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_185413) do
+ActiveRecord::Schema.define(version: 2019_05_26_201107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,14 +20,6 @@ ActiveRecord::Schema.define(version: 2019_05_24_185413) do
     t.string "user_name"
     t.string "password_digest"
     t.string "google_token"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "zip_codes", force: :cascade do |t|
-    t.integer "zip_code"
-    t.bigint "lat"
-    t.bigint "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

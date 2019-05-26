@@ -1,0 +1,22 @@
+.search {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.check-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  color: white;
+}
+
+#zip-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,1 +1,19 @@
 <h1>New Search Page</h1>
+
+<section class='search'>
+  <%= form_tag('/search', method: :get) do %>
+    <% celestial_bodies.each do |body| %>
+      <div class='check-box'%>
+        <%= check_box_tag 'bodies[]', body.name %>
+        <%= label_tag body.name %>
+      </div>
+    <% end %>
+    <p id='zip-code'>
+      <%= label_tag :zip_code, "Zip Code" %>
+      <%= text_field_tag :zip_code %>
+    </p>
+    <p id='submit'>
+      <%= submit_tag("Search") %>
+    </p>
+  <% end %>
+</section>

@@ -3,11 +3,16 @@ class SearchController < ApplicationController
   def new
   end
 
-  def create
-    binding.pry
+  def index
+    # render locals: {
+    #   facade: SearchResultsFacade.new(search_params)
+    # }
   end
 
-  def index
+  private
+
+  def search_params
+    params.permit(:zip_code, bodies:[])
   end
 
 end

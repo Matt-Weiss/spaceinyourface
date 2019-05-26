@@ -1,0 +1,258 @@
+{
+    "type": "FeatureCollection",
+    "query": [
+        "1331",
+        "17th",
+        "st",
+        "denver",
+        "co"
+    ],
+    "features": [
+        {
+            "id": "address.4419784687473756",
+            "type": "Feature",
+            "place_type": [
+                "address"
+            ],
+            "relevance": 1,
+            "properties": {
+                "accuracy": "rooftop"
+            },
+            "text": "17th Street",
+            "place_name": "1331 17th Street, Denver, Colorado 80202, United States",
+            "center": [
+                -104.996446,
+                39.750772
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.996446,
+                    39.750772
+                ]
+            },
+            "address": "1331",
+            "context": [
+                {
+                    "id": "neighborhood.295263",
+                    "text": "Lodo"
+                },
+                {
+                    "id": "postcode.18070504860405750",
+                    "text": "80202"
+                },
+                {
+                    "id": "place.10256295100046320",
+                    "wikidata": "Q16554",
+                    "text": "Denver"
+                },
+                {
+                    "id": "region.10094095868017490",
+                    "short_code": "US-CO",
+                    "wikidata": "Q1261",
+                    "text": "Colorado"
+                },
+                {
+                    "id": "country.9053006287256050",
+                    "short_code": "us",
+                    "wikidata": "Q30",
+                    "text": "United States"
+                }
+            ]
+        },
+        {
+            "id": "place.10256295100046320",
+            "type": "Feature",
+            "place_type": [
+                "place"
+            ],
+            "relevance": 0.6666666666666666,
+            "properties": {
+                "wikidata": "Q16554"
+            },
+            "text": "Denver",
+            "place_name": "Denver, Colorado, United States",
+            "bbox": [
+                -105.193616003506,
+                39.62371698,
+                -104.600299056,
+                39.94623402
+            ],
+            "center": [
+                -104.9653,
+                39.7348
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.9653,
+                    39.7348
+                ]
+            },
+            "context": [
+                {
+                    "id": "region.10094095868017490",
+                    "short_code": "US-CO",
+                    "wikidata": "Q1261",
+                    "text": "Colorado"
+                },
+                {
+                    "id": "country.9053006287256050",
+                    "short_code": "us",
+                    "wikidata": "Q30",
+                    "text": "United States"
+                }
+            ]
+        },
+        {
+            "id": "address.4817556049966848",
+            "type": "Feature",
+            "place_type": [
+                "address"
+            ],
+            "relevance": 0.6633333333333333,
+            "properties": {
+                "accuracy": "parcel"
+            },
+            "text": "17 St",
+            "place_name": "17 St, Columbus, Nebraska 68601, United States",
+            "center": [
+                -97.3613299,
+                41.4335355
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.3613299,
+                    41.4335355
+                ]
+            },
+            "context": [
+                {
+                    "id": "postcode.12937254570276620",
+                    "text": "68601"
+                },
+                {
+                    "id": "place.9071103594987300",
+                    "wikidata": "Q932391",
+                    "text": "Columbus"
+                },
+                {
+                    "id": "region.8407900583987740",
+                    "short_code": "US-NE",
+                    "wikidata": "Q1553",
+                    "text": "Nebraska"
+                },
+                {
+                    "id": "country.9053006287256050",
+                    "short_code": "us",
+                    "wikidata": "Q30",
+                    "text": "United States"
+                }
+            ]
+        },
+        {
+            "id": "neighborhood.285940",
+            "type": "Feature",
+            "place_type": [
+                "neighborhood"
+            ],
+            "relevance": 0.6566666666666666,
+            "properties": {},
+            "text": "College Hills",
+            "place_name": "College Hills, Denver, Colorado 80031, United States",
+            "bbox": [
+                -105.045133,
+                39.890722,
+                -105.016598,
+                39.909736
+            ],
+            "center": [
+                -105.0306,
+                39.9039
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -105.0306,
+                    39.9039
+                ]
+            },
+            "context": [
+                {
+                    "id": "postcode.6249386864944090",
+                    "text": "80031"
+                },
+                {
+                    "id": "place.8555117064046321",
+                    "wikidata": null,
+                    "text": "Denver"
+                },
+                {
+                    "id": "region.10094095868017490",
+                    "short_code": "US-CO",
+                    "wikidata": "Q1261",
+                    "text": "Colorado"
+                },
+                {
+                    "id": "country.9053006287256050",
+                    "short_code": "us",
+                    "wikidata": "Q30",
+                    "text": "United States"
+                }
+            ]
+        },
+        {
+            "id": "neighborhood.269532",
+            "type": "Feature",
+            "place_type": [
+                "neighborhood"
+            ],
+            "relevance": 0.6566666666666666,
+            "properties": {},
+            "text": "Cocalico",
+            "place_name": "Cocalico, Denver, Pennsylvania 17517, United States",
+            "bbox": [
+                -76.196066,
+                40.274764,
+                -76.176066,
+                40.294764
+            ],
+            "center": [
+                -76.19,
+                40.29
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.19,
+                    40.29
+                ]
+            },
+            "context": [
+                {
+                    "id": "postcode.3153601271001470",
+                    "text": "17517"
+                },
+                {
+                    "id": "place.6593199771046320",
+                    "wikidata": "Q1134230",
+                    "text": "Denver"
+                },
+                {
+                    "id": "region.2157738952111630",
+                    "short_code": "US-PA",
+                    "wikidata": "Q1400",
+                    "text": "Pennsylvania"
+                },
+                {
+                    "id": "country.9053006287256050",
+                    "short_code": "us",
+                    "wikidata": "Q30",
+                    "text": "United States"
+                }
+            ]
+        }
+    ],
+    "attribution": "NOTICE: © 2019 Mapbox and its suppliers. All rights reserved. Use of this data is subject to the Mapbox Terms of Service (https://www.mapbox.com/about/maps/). This response and the information it contains may not be retained. POI(s) provided by Foursquare."
+}

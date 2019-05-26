@@ -29,6 +29,7 @@ class SessionsController < ApplicationController
       )
       user.save(validate: false)
     end
+    session[:user_id] = user.id
     flash[:success] = "Successfully logged in!"
     redirect_to root_path
   end

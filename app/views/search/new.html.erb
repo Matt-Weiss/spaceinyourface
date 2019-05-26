@@ -10,7 +10,7 @@
     <% end %>
     <p id='zip-code'>
       <%= label_tag :zip_code, "Zip Code" %>
-      <%= text_field_tag :zip_code %>
+      <input type="text" name="zip_code" id="zip_code" pattern="[0-9]{5}" title="Five digit zip code">
     </p>
     <p id='submit'>
       <%= submit_tag("Search") %>

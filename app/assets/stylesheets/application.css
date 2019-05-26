@@ -14,7 +14,10 @@
  *= require_self
  */
 body {
-  margin: 0px;
+  width: 100%;
+  min-width: 500px;
+  max-width: 2000px;
+  margin: auto;
   padding: 0px;
   /* background: url("https://www.azonano.com/images/Article_Images/ImageForArticle_4983(1).jpg") no-repeat; */
   background-size:  100%;

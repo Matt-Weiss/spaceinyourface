@@ -13,16 +13,18 @@ img {
   max-height: 100vh;
 }
 
-#rectangle a {
-  padding-left: 1rem;
-}
+// #rectangle a {
+//   padding-left: 1rem;
+// }
+
 .nav_container {
   width: 100%;
+  min-width: inherit;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   background: #010101;
-  height: 20%;
+  height: 90px;
   // z-index: -1;
   opacity: .8;
   border: solid #37CBDC;
@@ -54,8 +56,8 @@ img {
 .user_info {
   font-size: 1.75rem;
   color:  #37CBDC;
-  width: 15rem;
-  height: 7.5rem;
+  // width: 15rem;
+  // height: 7.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -64,9 +66,12 @@ img {
   background-size: 100% 100%;
 }
 
+.upper_ship_nav_dash #rectangle {
+  height: inherit;
+}
 #display {
-  width: 14rem;
-  height: 9rem;
+  // width: 14rem;
+  // height: 9rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -74,8 +79,8 @@ img {
 }
 
 #kits {
-  width: 6rem;
-  height: 6rem;
+  // width: 6rem;
+  // height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,8 +89,8 @@ img {
 }
 
 #inst {
-  width: 6rem;
-  height: 6rem;
+  // width: 6rem;
+  // height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,8 +99,8 @@ img {
 }
 
 #new_search{
-  width: 6rem;
-  height: 6rem;
+  // width: 6rem;
+  // height: 6rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -105,9 +110,10 @@ img {
   background-size: 100% 100%;
 }
 
+
+
 #rectangle {
-  width: 11rem;
-  height: 5.5rem;
+  // width: 10rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

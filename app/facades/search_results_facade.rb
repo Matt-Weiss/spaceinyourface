@@ -10,7 +10,7 @@ class SearchResultsFacade
   end
 
   def body_results
-    SkyfieldService.new(mapbox_long_lat, @bodies)
+    skyfield_data.body_data
   end
 
   private
@@ -25,5 +25,9 @@ class SearchResultsFacade
 
   def mapbox_best_guess
     location.returned_locations["features"].first
+  end
+
+  def skyfield_data
+    @_skyfield_data ||= SkyfieldService.new(mapbox_long_lat, @bodies)
   end
 end

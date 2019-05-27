@@ -3,7 +3,7 @@
 ## About
 Is a group project that took place during Mod 3 at Turing School of Software & Design. This team included [Jeremy Bennett](https://github.com/JaxJafinPapau), [Deonte Cooper](https://github.com/djc00p), [Matt Levy](https://github.com/milevy1), [Corey Sheesley](https://github.com/CSheesley?tab=repositories), and [Matt Weiss](https://github.com/Matt-Weiss).
 
-Users of our applicaiton are able to select a range of celestial bodies that they would like to observe, and input a location based on a range of geographinc options. Once submitted, the user then receives key information for when and where to look for the objects that they selected: 
+Users of our application are able to select a range of celestial bodies that they would like to observe, and input a location based on a range of geographic options. Once submitted, the user then receives valuable information for when and where to look for the objects that they have selected: 
 
 #### Example:
 ```
@@ -16,10 +16,10 @@ INSERT SCREEN SHOT INSTEAD
     az: "208.18889336319882",
     el: "70.52100842964909"
 ```
-Additionally, users who have a telescope and the necessary hardware can connect to our app, click a `search with telescope` button, and their telescpoe will locate that object in the sky. This telescope can then automatically track the object through the night sky using motor mounts. 
+Additionally, users who have a telescope and the necessary hardware can connect to our app, click a `search with telescope` button, and their telescope will locate that object in the sky. This telescope can then automatically track the object through the night sky using motor mounts. 
 
 ## Future Iterations
-
+Add information here at the end of project
 
 ## Skyfield JSON
 What do you do when the API that you planned your entire project around is no longer in service? You build your own open source Microservice to provide the API endpoints that you need. Using an impressive dataset provided by **Jet Propulsion Laboratory**, combined with a **Skyfield - Python** package that performs complex calculations - we were able to build out a stand alone Python application which delivers the information that we consume by our **Space In Your Face** Rails application.
@@ -30,10 +30,10 @@ Endpoint for Celestial Bodies:\
 `https://skyfield-json.herokuapp.com/ephemerides?`
 
 Params:\
-*at this time no key is needed for this request*\
 `longitude` - string with underscore and direction - Ex: `41_W`\
 `latitude` - string with underscore and direction - Ex: `41_N`\
-`bodies` - comma seperated string of celestial bodies - Ex: `mercury,venus,mars,jupiter`
+`bodies` - comma seperated string of celestial bodies - Ex: `mercury,venus,mars,jupiter`\
+*at this time no key is needed for this request*
 
 A successful request will have a URL which looks like this: \
 `https://skyfield-json.herokuapp.com/ephemerides?longitude=41_W&latitude=41_N&bodies=mercury,venus,mars,jupiter`
@@ -77,6 +77,7 @@ el: "47deg 14' 04.0""
 }
 ```
 
+## Connecting Telescope to **Space In Your Face** App
 
 
 

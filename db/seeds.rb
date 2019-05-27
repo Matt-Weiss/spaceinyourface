@@ -7,7 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # CelestialBodies
-moon = CelestialBodies.create(name: "Moon")
+CelestialBodies.destroy_all
+
+moon = CelestialBodies.create(name: "Luna")
 mercury = CelestialBodies.create(name: "Mercury")
 venus= CelestialBodies.create(name: "Venus")
 mars = CelestialBodies.create(name: "Mars")

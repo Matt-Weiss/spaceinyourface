@@ -11,7 +11,7 @@ describe 'User can submit a search request' do
 
     click_on "New Search"
   end
-  
+
   context 'When I click on the "Search" button' do
     it 'I go to a search form, where I can select the bodies to search for' do
 
@@ -21,7 +21,7 @@ describe 'User can submit a search request' do
       find(:css, "#bodies_[value='Moon']").set(true)
       find(:css, "#bodies_[value='Mars']").set(true)
 
-      fill_in 'Zip Code', with: 80202
+      fill_in 'Location', with: '1331 17th St Denver, CO'
 
       click_button "Search"
 

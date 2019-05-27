@@ -21,11 +21,11 @@ class SkyfieldService
     end
 
     def longitude
-      @coordinates.first
+      Coordinate.new(@coordinates.first).longitude
     end
 
     def latitude
-      @coordinates.last
+      Coordinate.new(@coordinates.last).latitude
     end
 
     def body_params

@@ -1,1 +1,20 @@
-<h1>Search Index Page</h1>
+<h1>Search Results</h1>
+
+<p class="search-results">
+  My Location: <%= @facade.user_estimated_location %>
+
+  <% @facade.body_results.each do |body| %>
+    <section class="body">
+      <div class="body-link">
+        <%=link_to body.name, celestial_body_path(body.name) %>
+      </div>
+      <div class="body-angles">
+        Azimuth <%= body.user_az %> <br>
+        Elevation <%= body.user_el %> <br>
+        Right Ascension <%= body.user_ra %> <br>
+        Declination <%= body.user_dec %> <br>
+      </div>
+
+    </section>
+  <% end %>
+</p>

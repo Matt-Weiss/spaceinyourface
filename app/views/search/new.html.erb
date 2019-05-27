@@ -8,9 +8,10 @@
         <%= label_tag body.name %>
       </div>
     <% end %>
-    <p id='zip-code'>
-      <%= label_tag :zip_code, "Zip Code" %>
-      <input type="text" name="zip_code" id="zip_code" pattern="[0-9]{5}" title="Five digit zip code">
+    <p id='location'>
+      <%= label_tag :location %>
+      <!-- Need to resize this input field -->
+      <input type="input-field" name="location" title="location" id="location" placeholder="A street address A city or neighborhood A Postal Code A point of interest such as a public park">
     </p>
     <p id='submit'>
       <%= submit_tag("Search") %>

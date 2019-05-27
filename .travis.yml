@@ -12,3 +12,10 @@ before_script:
 - psql -c 'create database travis_ci_test;' -U postgres
 script:
 - bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: vuweUmsTbL0JCIhfj8uZpynE0Y8aiOVjKaNGOyu6VuT1KrSHFj+U0dunkEY2Ytu8jhemLX91Nr0xTts1d9JfUO5cVTt0usfErJ/H4/IOGrm+YavQdeipHLsPfOJazzZGMB7T19HPq6m3M8SRjHD7+0OVl9TQWz/tsUbqghoEUdW9IFFZKTMbiEjRDeSqUNunfWS0xZ3quKoxkXr9umMfi6dOKhA8BvQfEtHKrFdEK6vv7vFOQ3PVmuNmJ1L4hJ81xIki9XaY9/l/i8dEeAOM0GOdQpnpRCc9ax2JgR7hxPRfHOt2KjhyMk14OtKwgeq22ohY50PKocVR9YlRXqWDyVPvRltUcygv3aHuWKwi+Jk7qLA3WU2UCTZOHDT5NENBxjsZa/Gp2tpicLdf0mR0Eb8NYsEiYF1ZIm8qENcpBmYK8lncLwuxa4ctjKB+81MWiDgXH8ouJ9m4tIY+ZwJ+Rk7pYCiZ9yQ8RScqDo5tv+vi/65MnQP9ZAziOVQHr7F3swYCR+vmJH7gNdUG6wSfWAA+ymKXpV1I55snkf/KC4Ko59Uq84SaK6ODfZoTLsJRe53bM16HJlte63VRe0wyQO/gxWJRFArLPbFaYOGj4avDW7AuRXyzxVB6BfSmhau8ACihcIGkpJrMyCqyOm6WbE1ZC00ynE/yyaN0mICIcdQ=
+  app: spaceinyourface
+  on:
+    repo: Matt-Weiss/spaceinyourface

@@ -8,7 +8,7 @@ class Coordinate
     if @coordinate >= 0
       "#{@coordinate}_N"
     else
-      "#{@coordinate}_S"
+      "#{removed_negative}_S"
     end
   end
 
@@ -16,7 +16,13 @@ class Coordinate
     if @coordinate >= 0
       "#{@coordinate}_E"
     else
-      "#{@coordinate}_W"
+      "#{removed_negative}_W"
     end
+  end
+
+  private
+
+  def removed_negative
+    @coordinate * -1
   end
 end

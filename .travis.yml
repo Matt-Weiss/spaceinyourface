@@ -2,16 +2,16 @@ language: ruby
 cache: bundler
 env:
   global:
-    MAPBOX_API_KEY: "pk.eyJ1IjoibWlsZXZ5MSIsImEiOiJjanc1YTFjNTcwd3h3M3pzMDhpZXFubnNmIn0.Xc5T8cBuTM2rto2gGM0QFw" 
+    secure: hNd+/tBdBo9N0gjT3RL3Rgs7aMpVT/ijPdWChjmK8VwO0Vo1cAD9afg0Nz9SDobZnu5ffpGBH1uWqAVuiooNSZ0zSQDA51yCkwnefDWo9HEz7TpQlFInYPhTmMMlrLtlFcq0R0XJjUXcQ+cfD4Rgv6llrC4BGy8/51avFjSf1DQdmWxmwQ00lAzUt/a/krJ6c/FOhX/s3bAoG2XwnMbqtkVTiX5yUvhI8kT/Yro5jNcZ9i0oKSmnpn4ZSL5182aSyJ6TfnPwV5UaDvEgrLfNwSF8iRzEF1FT+5l4y8h1/6wZlIECSD3RR5SxmgCMmNRKQR1nPOqvDclz2s314la/IhL+pK5cRUbcEx2MYJQJ0HTHjJTudbLRmQ1VxDYRF6RezCBgbY4dsLjRr7e848BVQ4n8wvZD5DPB551VZwYQi2QIXfj43tSTJ/rd9RUE5UP/LLtEAxn4yPfJOnSfYsjf7sWplrXuAxc50JqZ3yv9w56ArNIkIyzGSGs3xXGkGwXvlPPqZi/LCLYIrY/Zf49GmiKeCR+hIIaQa7dyTCcTeydiqDNe8egc/w6EEu5aeLJt5fbM2UjvnagkocNURaTOxKH6/p/qT7CY99KCY9xoVrTbryHs+qfFIYRykCHLWlLvfUyboJ3ZbxKMWpraRuZ3Zoz+mhMXn9tbv+VQep1xvls=
 rbenv:
- -  2.4.1
+- 2.4.1
 services:
- - postgresql
+- postgresql
 before_install:
- - gem update --system
- - gem install bundler:2.0.1
+- gem update --system
+- gem install bundler:2.0.1
 before_script:
- - cp config/database.yml.travis config/database.yml
- - psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
+- psql -c 'create database travis_ci_test;' -U postgres
 script:
- - bundle exec rspec
+- bundle exec rspec

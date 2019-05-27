@@ -10,7 +10,9 @@ class SearchResultsFacade
   end
 
   def body_results
-    skyfield_data.body_data
+    skyfield_data.body_data["data"]["celestial_bodies"].map do |body|
+      SearchBody.new(body)
+    end
   end
 
   private

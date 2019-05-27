@@ -32,7 +32,6 @@ describe 'User can see search results' do
 
     expect(current_path).to eq(search_index_path)
     expect(page).to have_content("My Location: 1331 17th Street, Denver, Colorado 80202, United States")
-    save_and_open_page
     expect(page).to have_css(".body", count: 2)
 
     within first ".body" do

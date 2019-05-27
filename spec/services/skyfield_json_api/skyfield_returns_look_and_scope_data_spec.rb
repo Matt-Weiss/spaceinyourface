@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Skyfield Service' do
   it 'should should be able to recieve expected data from api call' do
     json_skyfield_data = File.open('./spec/fixtures/skyfield_data.json')
-    stub_request(:get, "https://skyfield-json.herokuapp.com/ephemerides?bodies=mercury,luna,&latitude=41.345&longitude=-41.112")
+    stub_request(:get, "https://skyfield-json.herokuapp.com/ephemerides?bodies=mercury,luna,&latitude=41.345_N&longitude=-41.112_W")
       .to_return(status: 200, body: json_skyfield_data)
     # stub_request(:get, "https://skyfield-json.herokuapp.com/ephemerides?longitude=-41.112&latitude=41.345_N&bodies=mercury,luna")
 

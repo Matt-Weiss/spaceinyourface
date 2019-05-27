@@ -30,7 +30,7 @@ class SkyfieldService
 
     def body_params
       p = ""
-      @bodies.each { |body| p.concat("#{body},") }
+      @bodies.each { |body| p.concat("#{body.downcase},") }
       p.chomp
     end
 end

@@ -1,10 +1,17 @@
 language: ruby
+cache: bundler
+env:
+  global:
+    MAPBOX_API_KEY: "pk.eyJ1IjoibWlsZXZ5MSIsImEiOiJjanc1YTFjNTcwd3h3M3pzMDhpZXFubnNmIn0.Xc5T8cBuTM2rto2gGM0QFw" 
 rbenv:
--  2.4.1
+ -  2.4.1
 services:
  - postgresql
+before_install:
+ - gem update --system
+ - gem install bundler:2.0.1
 before_script:
  - cp config/database.yml.travis config/database.yml
  - psql -c 'create database travis_ci_test;' -U postgres
 script:
-- bundle exec rspec
+ - bundle exec rspec

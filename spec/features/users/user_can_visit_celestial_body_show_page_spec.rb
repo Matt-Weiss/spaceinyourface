@@ -3,8 +3,8 @@ require 'rails_helper'
 describe 'As a registered user I can visit the celestial body show page' do
   before :each do
     user = create(:user)
-    moon = CelestialBodies.create(name: "Luna", description: "The Moon is an astronomical body that orbits planet Earth and is Earth's only permanent natural satellite. It is the fifth-largest natural satellite in the Solar System, and the largest among planetary satellites relative to the size of the planet that it orbits (its primary). The Moon is after Jupiter's satellite Io the second-densest satellite in the Solar System among those whose densities are known. The Moon is thought to have formed about 4.51 billion years ago, not long after Earth. The most widely accepted explanation is that the Moon formed from the debris left over after a giant impact between Earth and a Mars-sized body called Theia.")
-    mars = CelestialBodies.create(name: "Mars")
+    @moon = CelestialBodies.create(name: "Luna", description: "The Moon is an astronomical body that orbits planet Earth and is Earth's only permanent natural satellite. It is the fifth-largest natural satellite in the Solar System, and the largest among planetary satellites relative to the size of the planet that it orbits (its primary). The Moon is after Jupiter's satellite Io the second-densest satellite in the Solar System among those whose densities are known. The Moon is thought to have formed about 4.51 billion years ago, not long after Earth. The most widely accepted explanation is that the Moon formed from the debris left over after a giant impact between Earth and a Mars-sized body called Theia.")
+    @mars = CelestialBodies.create(name: "Mars")
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
@@ -32,7 +32,7 @@ describe 'As a registered user I can visit the celestial body show page' do
 
     click_link "Luna"
 
-    expect(page).to have_content("#{moon.name}")
-    expect(page).to have_content("#{moon.description}")
+    expect(page).to have_content("#{@moon.name}")
+    expect(page).to have_content("#{@moon.description}")
   end
 end

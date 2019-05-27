@@ -17,7 +17,7 @@ private
   end
 
   def get_json(url)
-    url.concat(".json")
+    url.concat('.json')
     response = conn.get(url)
     JSON.parse(response.body)
   end

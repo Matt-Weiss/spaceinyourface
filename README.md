@@ -26,16 +26,16 @@ What do you do when the API that you planned your entire project around is no lo
 
 #### How To Use:
 
-Endpoint for Celestial Bodies:
+Endpoint for Celestial Bodies:\
 `https://skyfield-json.herokuapp.com/ephemerides?`
 
-Params:
-*at this time no key is needed for this request*
-`longitude` - string with underscore and direction - Ex: `41_W`
-`latitude` - string with underscore and direction - Ex: `41_N`
+Params:\
+*at this time no key is needed for this request*\
+`longitude` - string with underscore and direction - Ex: `41_W`\
+`latitude` - string with underscore and direction - Ex: `41_N`\
 `bodies` - comma seperated string of celestial bodies - Ex: `mercury,venus,mars,jupiter`
 
-A successful request will have a URL which looks like this: 
+A successful request will have a URL which looks like this: \
 `https://skyfield-json.herokuapp.com/ephemerides?longitude=41_W&latitude=41_N&bodies=mercury,venus,mars,jupiter`
 
 #### Example JSON Output:

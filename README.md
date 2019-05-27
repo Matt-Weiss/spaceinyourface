@@ -1,4 +1,6 @@
 # Space In Your Face
+Is a group project that took place during Mod 3 at Turing School of Software & Design. This team included [Jeremy Bennett](https://github.com/JaxJafinPapau), [Deonte Cooper](https://github.com/djc00p), [Matt Levy](https://github.com/milevy1), [Corey Sheesley](https://github.com/CSheesley?tab=repositories), and [Matt Weiss](https://github.com/Matt-Weiss).
+
 
 ## Getting Set up
 ```

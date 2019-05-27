@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
   resources :search, only: [:index, :new]
+  resources :celestial_bodies, only: [:show]
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

@@ -2,6 +2,7 @@
 
 <p class="search-results">
   My Location: <%= @facade.user_estimated_location %>
+  <p id="search-time"> Search time (UTC): <%= @facade.search_time %></p>
 
   <% @facade.body_results.each do |body| %>
     <section class="body">

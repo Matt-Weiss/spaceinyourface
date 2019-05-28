@@ -15,6 +15,10 @@ class SearchResultsFacade
     end
   end
 
+  def search_time
+    skyfield_data.body_data['data']['time']
+  end
+
   private
 
   def location

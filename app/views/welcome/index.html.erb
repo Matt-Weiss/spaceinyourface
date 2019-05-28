@@ -1,7 +1,26 @@
-<h1>Welcome to Space In Your Face</h1>
-
-<div class="transbox">
-  <div class="welcome_message">
-
+<section class="hero-image">
+  <div class="hero-image-text">
+    SPACE IN YOUR FACE
   </div>
-</div>
+  <img src="https://www.rebornevo.com/forum/uploads/monthly_2017_07/banner2.png.3adb9e0c7eee3d488000e87bcbfaf457.png" >
+</section>
+
+<% if current_user %>
+  <section class="search">
+    <div class="search-button">
+      <p><%= link_to "SEARCH", new_search_path %></p>
+    </div>
+  </section>
+<% else %>
+  <section class="search">
+    <div class="sign-up-message">
+      <p><%= link_to "Click Here", new_user_path %> to sign up and start exploring the cosmos!</p>
+    </div>
+  </section>
+<% end %>
+
+<section class="welcome-content">
+  <p>Welcome to Space In Your Face</p>
+  <p>Where all of space is brought to your face</p>
+  <p>In one convenient place.</p>
+</section>

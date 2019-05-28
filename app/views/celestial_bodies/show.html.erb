@@ -1,9 +1,20 @@
-<section class="body-title">
-  <h1><%= facade.name %></h1>
-</section>
+<div class="body-box">
+  <div class="body-title">
+    <div class="transbox">
+      <h1><%= facade.name %></h1>
+    </div>
+  </div>
+  <div class="body-description">
+    <div class="transbox">
+      <%= facade.description %>
+    </div>
+  </div>
 
-<p>
-  <section class="body-description">
-    <%= facade.description %>
-  </section>
-</p>
+  <div class="body-image">
+      <img src="<%= facade.image %>" alt="Image of <%= facade.name %>">
+  </div>
+
+  <div class="tracking-button">
+    <%# <%= button_to "Point My Telescope at #{facade.name}", action: :create, controller: :telescope_controller  %> %>
+  </div>
+</div>

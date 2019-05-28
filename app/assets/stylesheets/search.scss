@@ -1,13 +1,14 @@
 .search {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 25px;
 }
 
 .check-box {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  color: white;
+  color: black;
 }
 
 #location {

@@ -4,22 +4,17 @@
     <title>Spaceinyourface</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
       <div class="flash-message">
-        <% flash.each do |name, msg| %>
-        <div class="transbox">
+        <% flash.each do |name, msg| %>      
           <%= content_tag :div, msg, class: name %>
         <% end %>
-      </div>
     </div>
 
-
     <%= yield %>
-    <%= render 'partials/nav' %>
   </body>
 </html>

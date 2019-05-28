@@ -14,9 +14,17 @@
  *= require_self
  */
 body {
-  margin: 0px;
+  width: 100%;
+  min-width: 500px;
+  max-width: 2000px;
+  margin: auto;
   padding: 0px;
   background-color: white;
   background-size:  100%;
   font-family: verdana;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
 }

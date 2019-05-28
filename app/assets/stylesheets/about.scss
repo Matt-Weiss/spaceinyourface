@@ -1,0 +1,23 @@
+.about_container {
+  
+}
+#about_message p a {
+  font-size: inherit;
+  color:  inherit;
+}
+
+#credit_to {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#credit_to p  {
+  padding: 0;
+  margin: 0;
+}
+
+#credit_to p a {
+  font-size: inherit;
+  color:  inherit;
+}

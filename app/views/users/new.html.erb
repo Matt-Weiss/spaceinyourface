@@ -1,28 +1,26 @@
 <h4>Register</h4>
 <section class="registration-form">
-  <div class="transbox">
   <%= form_for @user do |f| %>
-    <div id='fields'>
-      <div>
-        <p id='label'><%= f.label :user_name, "User Name" %></p>
-        <p id='field'><%= f.text_field :user_name %></p>
-      </div>
-      <div >
-        <p id='label'><%= f.label :email  %></p>
-        <p id='field'><%= f.email_field :email %></p>
-      </div>
+  <div id='fields'>
+    <div>
+      <p id='label'><%= f.label :user_name, "User Name" %></p>
+      <p id='field'><%= f.text_field :user_name %></p>
     </div>
-    <div id='fields'>
-      <div>
-        <p id='label'><%= f.label :password  %></p>
-        <p id='field'><%= f.password_field :password %></p>
-      </div>
-      <div>
-        <p id='label'><%= f.label :password_confirmation, "Password Confirmation" %></p>
-        <p id='field'><%= f.password_field :password_confirmation %></p>
-      </div>
+    <div >
+      <p id='label'><%= f.label :email  %></p>
+      <p id='field'><%= f.email_field :email %></p>
     </div>
-      <p id='submit'><%= f.submit 'Create Account' %></p>
-    <% end %>
+  </div>
+  <div id='fields'>
+    <div>
+      <p id='label'><%= f.label :password  %></p>
+      <p id='field'><%= f.password_field :password %></p>
+    </div>
+    <div>
+      <p id='label'><%= f.label :password_confirmation, "Password Confirmation" %></p>
+      <p id='field'><%= f.password_field :password_confirmation %></p>
+    </div>
+  </div>
+  <p id='submit'><%= f.submit 'Create Account' %></p>
+  <% end %>
 </section>
-</div>

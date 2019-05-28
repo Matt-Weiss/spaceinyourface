@@ -10,14 +10,11 @@
 
   <body>
     <%= render 'partials/nav' %>
-    <div class="transbox">
-      <div class="flash-message">
-        <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, class: name %>
-        <% end %>
-      </div>
+    <div class="flash-message">
+      <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+      <% end %>
     </div>
-
     <%= yield %>
   </body>
 </html>

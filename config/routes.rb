@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get '/o/oauth2/auth', to: 'sessions#create'
   get 'auth/google_oauth2/callback', to: 'sessions#create'
 
+  resources :iss_search, only: [:index, :new]
 end

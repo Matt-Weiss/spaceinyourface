@@ -9,4 +9,8 @@ class CelestialBodyFacade
   def description
     @body.description
   end
+
+  def image
+    @body.image_url
+  end
 end

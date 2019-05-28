@@ -1,117 +1,43 @@
-a {
-  font-size: 1.5rem;
-  color:  #37CBDC;
+/* Add a black background color to the top navigation */
+.topnav {
   display: flex;
-  justify-content: center;
-  padding-bottom: .5rem;
-  text-decoration: none;
-}
-
-img {
-  /* unused but necessary for inner images */
-  max-width: 100%;
-  max-height: 100vh;
-}
-
-#rectangle a {
-  padding-left: 1rem;
-}
-.nav_container {
-  width: 100%;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  background: #010101;
-  height: 35vh;
-  z-index: -1;
-  opacity: .8;
-  border: solid #37CBDC;
-}
-
-.nav_bar {
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.upper_ship_nav_dash {
-  display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  justify-content: space-around;
+  overflow: hidden;
+  border-bottom: 3px solid black ;
 }
 
-.main_body_of_nav_bar {
-  height: 15vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-size: 100% 100%;
-}
-
-.user_info {
-  font-size: 1.75rem;
-  color:  #37CBDC;
-  width: 15rem;
-  height: 7.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: url('https://i.imgur.com/MSO404s.png') no-repeat;
-  background-size: 100% 100%;
-}
-
-#display {
-  width: 14rem;
-  height: 9rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-#kits {
-  width: 6rem;
-  height: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url('https://i.imgur.com/XZWEZ9j.png');
-  background-size: 100% 100%;
-}
-
-#inst {
-  width: 6rem;
-  height: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url('https://i.imgur.com/WMO2KOZ.png');
-  background-size: 100% 100%;
-}
-
-#new_search{
-  width: 6rem;
-  height: 6rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.topnav a {
+  float: left;
+  color: #2F4F4F;
   text-align: center;
-  background: url('https://i.imgur.com/7wv29nt.png');
-  background-size: 100% 100%;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-#rectangle {
-  width: 11rem;
-  height: 5.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  background: url("https://i.imgur.com/hOpD52p.png") no-repeat;
-  background-size: 100% 100%;
+.small-logo {
+  float: left;
+}
+
+.small-logo img {
+  height: 100%;
+  width: 60px;
+}
+
+.nav-links {
+  display:flex;
+  float: right;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
 }

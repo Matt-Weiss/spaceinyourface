@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
   resources :search, only: [:index, :new]
-  resources :celestial_bodies, only: [:show]
+  resources :celestial_bodies, only: [:show] do
+    resources :telescope, only: [:create]
+  end
+
 
   get '/about', to: 'about#index', as: 'about'
 

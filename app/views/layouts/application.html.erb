@@ -9,12 +9,12 @@
   </head>
 
   <body>
-      <div class="flash-message">
-        <% flash.each do |name, msg| %>      
-          <%= content_tag :div, msg, class: name %>
-        <% end %>
+    <%= render 'partials/nav' %>
+    <div class="flash-message">
+      <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+      <% end %>
     </div>
-
     <%= yield %>
   </body>
 </html>

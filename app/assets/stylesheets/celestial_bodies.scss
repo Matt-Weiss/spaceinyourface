@@ -1,0 +1,24 @@
+.body-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.body-title {
+  display: justify-content;
+  align-self: flex-start;
+}
+
+.body-description {
+  display: justify-content;
+  justify-content: center;
+  flex-grow: 100%;
+  flex-wrap: wrap;
+}
+
+.body-image {
+  display: justify-content;
+  padding-right: 50px;
+  align-self: flex-end;
+}

@@ -1,19 +1,55 @@
-h1 {
-  color: #37CBDC;
-  display: flex;
-  justify-content: center;
+.hero-image {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
-
-.transbox {
-  margin: 30px;
-  background-color: #010101;
-  border: 1px solid #37CBDC;
-  opacity: 0.9;
-  filter: alpha(opacity=60);
+.hero-image img {
+  width: 100%;
 }
-p {
-  color: #37CBDC;
-  font-weight: bold;
-  font-size: 1.5rem;
+
+.hero-image-text {
+  position: absolute;
+  font-size: 40px;
+  top: 40%;
+  left: 10%;
+  color: white;
+}
+
+.search-button {
+  margin: auto;
+  display: inline-block;
+  font-size: 40px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding: 30px;
+  border-style: solid;
+  border-color: navy;
+  border-width: 5px;
+  border-radius: 30px;
+  border-spacing: 10px;
+}
+
+.sign-up-message {
+  // not centering as intended
+  margin: auto;
+  display: inline-block;
+  font-size: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding: 20px;
+  border-style: solid;
+  border-color: navy;
+  border-width: 5px;
+  border-radius: 30px;
+  border-spacing: 10px;
+}
+
+.welcome-content {
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  width: 75%;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }

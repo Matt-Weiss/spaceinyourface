@@ -6,7 +6,7 @@
   <% @facade.body_results.each do |body| %>
     <section class="body">
       <div class="body-link">
-        <%=link_to body.name, celestial_body_path(body.name) %>
+        <%=link_to body.name, celestial_body_path(body.name, location: @facade.user_telescope_location) %>
       </div>
       <div class="body-angles">
         Azimuth <%= body.user_az %> <br>

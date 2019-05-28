@@ -7,21 +7,18 @@
 
 .body-title {
   display: justify-content;
-
-  font-size: 48pt;
-  color: #FFFF99;
+  align-self: flex-start;
 }
 
 .body-description {
   display: justify-content;
   justify-content: center;
-  width: 40%;
+  flex-grow: 100%;
   flex-wrap: wrap;
-  font-size: 22pt;
-  color: #FFFF99;
 }
 
 .body-image {
   display: justify-content;
   padding-right: 50px;
+  align-self: flex-end;
 }

@@ -65,7 +65,7 @@ describe 'User can submit a search request' do
       click_button "Search"
 
       expect(page).to have_content("Must select at least one celestial body")
-      expect(page).to have_css(".search")
+      expect(page).to have_css(".search-box")
       expect(current_path).to eq(search_index_path)
     end
   end

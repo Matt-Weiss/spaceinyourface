@@ -7,9 +7,6 @@ describe 'User can submit a search request' do
     mars = CelestialBodies.create(name: "Mars")
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-    visit root_path
-
-    click_on "New Search"
 
     json_search_index_response = File.open('./spec/fixtures/search_data.json')
     stub_request(:get, "https://skyfield-json.herokuapp.com/ephemerides?bodies=luna,mars&latitude=39.750772_N&longitude=104.996446_W")
@@ -24,8 +21,7 @@ describe 'User can submit a search request' do
       stub_request(:get, "https://api.mapbox.com/geocoding/v5/mapbox.places/1331%2017th%20st%20denver,%20co.json?access_token=#{ENV['MAPBOX_API_KEY']}")
       .to_return(status: 200, body: json_mapbox_response)
 
-      click_on "New Search"
-      expect(current_path).to eq(new_search_path)
+      visit new_search_path
 
       find(:css, "#bodies_[value='Luna']").set(true)
       find(:css, "#bodies_[value='Mars']").set(true)
@@ -42,8 +38,8 @@ describe 'User can submit a search request' do
 
       json_zipcode_response = File.open('./spec/fixtures/zipcode_response.json')
 
-       stub_request(:get, "https://api.mapbox.com/geocoding/v5/mapbox.places/80202.json?access_token=#{ENV['MAPBOX_API_KEY']}")
-        .to_return(status: 200, body: json_zipcode_response)
+      stub_request(:get, "https://api.mapbox.com/geocoding/v5/mapbox.places/80202.json?access_token=#{ENV['MAPBOX_API_KEY']}")
+      .to_return(status: 200, body: json_zipcode_response)
 
       visit new_search_path
 
@@ -62,8 +58,7 @@ describe 'User can submit a search request' do
   context 'When I submit a request with no bodies selected' do
     it 'shows me an error message, and I see the search form again' do
 
-      click_on "New Search"
-      expect(current_path).to eq(new_search_path)
+      visit new_search_path
 
       fill_in 'Location', with: 80203
 

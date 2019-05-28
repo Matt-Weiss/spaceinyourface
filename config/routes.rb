@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :search, only: [:index, :new]
   resources :celestial_bodies, only: [:show]
 
+  get '/about', to: 'about#index', as: 'about'
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

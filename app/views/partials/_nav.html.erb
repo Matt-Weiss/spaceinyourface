@@ -1,53 +1,16 @@
-<div class="nav_bar" >
-  <section class="upper_ship_nav_dash">
-      <% if current_user.nil? %>
-      <div class='login' id="rectangle">
-        <%= link_to 'Log In', login_path %>
-      </div>
-      <% else %>
-      <div class='logout' id="rectangle">
-        <%= link_to 'Log Out', logout_path, method: :delete %>
-      </div>
-      <% end %>
-      <div class="user_info">
-        <section id='display'>
-          <% if current_user.nil? %>
-          <%= 'Visitor' %>
-          <% else %>
-          <%= current_user.user_name %>
-          <% end %>
-        </section>
-      </div>
-      <div class='home' id="rectangle">
-        <%= link_to 'Home', root_path %>
-      </div>
-  </section>
-  <section class="main_body_of_nav_bar">
-    <% if current_user.nil? %>
-    <div class='register' id="rectangle">
-      <%= link_to 'Register', new_user_path%>
-    </div>
-    <div id="kits">
-    </div>
-    <div id="inst">
-    </div>
-    <div id="new_search">
-    </div>
+<nav class="topnav">
+  <div class="small-logo">
+    <img src="https://previews.123rf.com/images/mirquurius/mirquurius1801/mirquurius180100024/93833130-astronaut-looks-through-the-telescope-to-universe-on-abstract-moon-hand-drawn-style-space-vector-ill.jpg" >
+  </div>
+
+  <div class="nav-links">
+    <% if current_user %>
+      <%= link_to 'Log Out', logout_path, method: :delete %>
     <% else %>
-    <div id="kits">
-      <%= link_to 'Kits'%>
-    </div>
-    <div id="inst">
-      <%= link_to 'Inst.'%>
-    </div>
-    <div id="new_search">
-      <%= link_to 'New Search', new_search_path%>
-    </div>
+      <%= link_to 'Log In', login_path %>
+      <%= link_to 'Register', new_user_path %>
     <% end %>
-    <div class='about' id="rectangle">
-      <%= link_to 'About'%>
-    </div>
-  </section>
-</div>
-<div class="nav_container">
-</div>
+      <%= link_to 'About', about_path %>
+      <%= link_to 'Home', root_path %>
+  </div>
+</nav>

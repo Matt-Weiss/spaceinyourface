@@ -30,6 +30,12 @@
   border-spacing: 10px;
 }
 
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 25px;
+}
+
 .sign-up-message {
   margin: auto;
   display: inline-block;

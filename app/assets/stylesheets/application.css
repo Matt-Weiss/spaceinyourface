@@ -21,19 +21,10 @@ body {
   padding: 0px;
   background-color: white;
   background-size:  100%;
-<<<<<<< Updated upstream
   font-family: verdana;
-=======
-  scroll-behavior: smooth;
-  
->>>>>>> Stashed changes
 }
 
 h1 {
   display: flex;
   justify-content: center;
-}
-
-a:hover {
-  color:
 }

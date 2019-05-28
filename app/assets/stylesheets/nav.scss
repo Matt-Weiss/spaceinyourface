@@ -1,51 +1,5 @@
-<<<<<<< Updated upstream
 /* Add a black background color to the top navigation */
 .topnav {
-=======
-.nav_bar a {
-  font-size: 1.5rem;
-  color:  #37CBDC;
-  display: flex;
-  justify-content: center;
-  padding-bottom: .5rem;
-  text-decoration: none;
-}
-
-img {
-  /* unused but necessary for inner images */
-  max-width: 100%;
-  max-height: 100vh;
-}
-
-// #rectangle a {
-//   padding-left: 1rem;
-// }
-
-.nav_container {
-  width: 100%;
-  min-width: inherit;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  background: #010101;
-  height: 90px;
-  // z-index: -1;
-  opacity: .8;
-  border: solid #37CBDC;
-}
-
-.nav_bar {
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  z-index: 2;
-}
-
-.upper_ship_nav_dash {
->>>>>>> Stashed changes
   display: flex;
   justify-content: space-between;
   flex-direction: row;

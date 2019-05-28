@@ -1,0 +1,27 @@
+.body-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.body-title {
+  display: justify-content;
+
+  font-size: 48pt;
+  color: #FFFF99;
+}
+
+.body-description {
+  display: justify-content;
+  justify-content: center;
+  width: 40%;
+  flex-wrap: wrap;
+  font-size: 22pt;
+  color: #FFFF99;
+}
+
+.body-image {
+  display: justify-content;
+  padding-right: 50px;
+}

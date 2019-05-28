@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'welcome#index'
+  get '/about', to: 'about#index', as: :about
 
   resources :users, only: [:new, :create]
   resources :search, only: [:index, :new]

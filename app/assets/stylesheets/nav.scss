@@ -22,8 +22,8 @@ img {
   position: fixed;
   bottom: 0;
   background: #010101;
-  height: 35vh;
-  z-index: -1;
+  height: 20%;
+  // z-index: -1;
   opacity: .8;
   border: solid #37CBDC;
 }
@@ -35,6 +35,7 @@ img {
   width: 100%;
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .upper_ship_nav_dash {
@@ -44,7 +45,6 @@ img {
 }
 
 .main_body_of_nav_bar {
-  height: 15vh;
   display: flex;
   justify-content: space-around;
   align-items: center;

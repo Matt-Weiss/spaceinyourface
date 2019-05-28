@@ -16,6 +16,12 @@
 body {
   margin: 0px;
   padding: 0px;
-  background: url("https://www.azonano.com/images/Article_Images/ImageForArticle_4983(1).jpg") no-repeat;
+  /* background: url("https://www.azonano.com/images/Article_Images/ImageForArticle_4983(1).jpg") no-repeat; */
   background-size:  100%;
+}
+
+h1 {
+  color: #37CBDC;
+  display: flex;
+  justify-content: center;
 }

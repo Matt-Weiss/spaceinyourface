@@ -10,9 +10,9 @@
   </head>
 
   <body>
-    <div class="transbox">
       <div class="flash-message">
         <% flash.each do |name, msg| %>
+        <div class="transbox">
           <%= content_tag :div, msg, class: name %>
         <% end %>
       </div>

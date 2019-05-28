@@ -18,6 +18,10 @@ class SearchResultsFacade
   def user_telescope_location
     "#{skyfield_data.body_data["data"]["latitude"]},#{skyfield_data.body_data["data"]["longitude"]}"
   end
+  
+  def search_time
+    skyfield_data.body_data['data']['time']
+  end
 
   private
 

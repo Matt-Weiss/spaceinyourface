@@ -15,7 +15,6 @@ describe 'telescope_move PORO' do
                       "end_ra": "2.9385758993886246"}
                     }
       @motor = TelescopeMove.new(ephemeris_data)
-      # binding.pry
     end
 
     it 'dec_delta' do

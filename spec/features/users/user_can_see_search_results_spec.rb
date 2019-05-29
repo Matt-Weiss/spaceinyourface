@@ -7,6 +7,9 @@ describe 'User can see search results' do
     mars = CelestialBodies.create(name: "Mars")
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    
+    stub_request(:get, "https://skyfield-json.herokuapp.com/")
+      .to_return(status: 200, body: '')
   end
 
   it 'When I submit a new search' do

@@ -8,6 +8,9 @@ describe 'User can submit a search request' do
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
+    stub_request(:get, "https://skyfield-json.herokuapp.com/")
+      .to_return(status: 200, body: '')
+
     json_search_index_response = File.open('./spec/fixtures/search_data.json')
     stub_request(:get, "https://skyfield-json.herokuapp.com/ephemerides?bodies=luna,mars&latitude=39.750772_N&longitude=104.996446_W")
       .to_return(status: 200, body: json_search_index_response)

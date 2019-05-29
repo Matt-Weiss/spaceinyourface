@@ -10,6 +10,9 @@ describe 'As a registered user I can visit the celestial body show page' do
 
     json_mapbox_response = File.open('./spec/fixtures/mapbox_data.json')
 
+    stub_request(:get, "https://skyfield-json.herokuapp.com/")
+      .to_return(status: 200, body: '')
+
     stub_request(:get, "https://api.mapbox.com/geocoding/v5/mapbox.places/1331%2017th%20st%20denver,%20co.json?access_token=#{ENV['MAPBOX_API_KEY']}")
       .to_return(status: 200, body: json_mapbox_response)
 

@@ -19,6 +19,7 @@ gem 'google-api-client'
 gem 'jquery'
 gem 'omniauth-google-oauth2'
 gem 'pg'
+gem 'local_time'
 
 
 group :development, :test do

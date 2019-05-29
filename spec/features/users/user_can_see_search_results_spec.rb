@@ -35,9 +35,9 @@ describe 'User can see search results' do
 
     expect(page).to have_css("#search-time")
 
-    expect(page).to have_css(".body", count: 2)
+    expect(page).to have_css(".celestial-body", count: 2)
 
-    within first ".body" do
+    within first ".celestial-body" do
       expect(page).to have_link("Luna")
       expect(page).to have_content("Azimuth")
       expect(page).to have_content("Elevation")

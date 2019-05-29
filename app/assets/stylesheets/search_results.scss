@@ -1,0 +1,31 @@
+.search-results {
+  // margin: auto
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.results {
+  margin-top: 1rem;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.celestial-body {
+  border: 1px solid navy;
+  margin-top: 1rem;
+  padding: 10px;
+}
+
+.search-results h4 {
+  margin-top: none;
+}
+
+.body-link {
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+}

@@ -1,21 +1,49 @@
-.search {
+.search-box {
+  margin: auto;
+  width: 450px;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   padding-top: 25px;
+  border: 3px solid navy;
+}
+
+.body-choices {
+  margin: auto;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .check-box {
+  width: 100px;
   display: flex;
   flex-direction: row;
   justify-content: left;
   color: black;
+  padding: 10px;
+}
+
+.location-field {
+  text-align: center;
+  width: 400px;
+  padding: 10px;
+}
+
+#location label {
+  padding-bottom: 10px;
 }
 
 #location {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
+
 #submit {
   display: flex;
   justify-content: center;

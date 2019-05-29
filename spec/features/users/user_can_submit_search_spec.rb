@@ -13,11 +13,10 @@ describe 'User can submit a search request' do
       .to_return(status: 200, body: json_search_index_response)
   end
 
-  context 'When I click on the "Search" button' do
-    it 'I go to a search form, where I can select the bodies to search for by address' do
+  context 'When on the New Search Page' do
+    it 'I can select the bodies to search for by a location input' do
 
       json_mapbox_response = File.open('./spec/fixtures/mapbox_data.json')
-
       stub_request(:get, "https://api.mapbox.com/geocoding/v5/mapbox.places/1331%2017th%20st%20denver,%20co.json?access_token=#{ENV['MAPBOX_API_KEY']}")
       .to_return(status: 200, body: json_mapbox_response)
 
@@ -26,31 +25,15 @@ describe 'User can submit a search request' do
       find(:css, "#bodies_[value='Luna']").set(true)
       find(:css, "#bodies_[value='Mars']").set(true)
 
+      location_directions = "A street address, A city or neighborhood, A postal code, A point of interest"
+
+      expect(page).to have_selector(".location-field[placeholder='#{location_directions}']")
+
       fill_in 'Location', with: '1331 17th St Denver, CO'
 
       click_button "Search"
 
       expect(current_url).to include("bodies[]=Luna&bodies[]=Mars&location=1331+17th+St+Denver%2C+CO")
-      expect(current_path).to eq(search_index_path)
-    end
-
-    it 'I can search by zip code' do
-
-      json_zipcode_response = File.open('./spec/fixtures/zipcode_response.json')
-
-      stub_request(:get, "https://api.mapbox.com/geocoding/v5/mapbox.places/80202.json?access_token=#{ENV['MAPBOX_API_KEY']}")
-      .to_return(status: 200, body: json_zipcode_response)
-
-      visit new_search_path
-
-      find(:css, "#bodies_[value='Luna']").set(true)
-      find(:css, "#bodies_[value='Mars']").set(true)
-
-      fill_in 'Location', with: 80202
-
-      click_button "Search"
-
-      expect(current_url).to include("bodies[]=Luna&bodies[]=Mars&location=80202")
       expect(current_path).to eq(search_index_path)
     end
   end
@@ -65,6 +48,22 @@ describe 'User can submit a search request' do
       click_button "Search"
 
       expect(page).to have_content("Must select at least one celestial body")
+      expect(page).to have_css(".search-box")
+      expect(current_path).to eq(search_index_path)
+    end
+  end
+
+  context 'When I submit a request with no location information' do
+    it 'shows me an error message, and I see the search form again' do
+
+      visit new_search_path
+
+      find(:css, "#bodies_[value='Luna']").set(true)
+      find(:css, "#bodies_[value='Mars']").set(true)
+
+      click_button "Search"
+
+      expect(page).to have_content("Must enter location information")
       expect(page).to have_css(".search-box")
       expect(current_path).to eq(search_index_path)
     end

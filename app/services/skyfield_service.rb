@@ -1,23 +1,28 @@
 class SkyfieldService
-  def initialize(coordinates, bodies)
+  def initialize(coordinates, bodies, url)
     @coordinates = coordinates
     @bodies = bodies
+    @url = url
   end
 
   def body_data
-    response = conn.get
-    JSON.parse(response.body)
+    body = response(@url).body
+    JSON.parse(body)
   end
 
   private
 
     def conn
-      Faraday.new("https://skyfield-json.herokuapp.com/ephemerides") do |f|
+      Faraday.new("https://skyfield-json.herokuapp.com/") do |f|
         f.params[:latitude] = latitude
         f.params[:longitude] = longitude
         f.params[:bodies] = body_params
         f.adapter Faraday.default_adapter
       end
+    end
+
+    def response(url)
+      conn.get(url)
     end
 
     def longitude

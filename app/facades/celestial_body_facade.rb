@@ -1,6 +1,7 @@
 class CelestialBodyFacade
   attr_reader :name,
-              :user_location
+              :user_location,
+              :body
 
   def initialize(params)
     @name = params["id"]

@@ -10,7 +10,7 @@ describe 'Skyfield Service' do
       coordinates = [-41.112, 41.345]
       bodies = ["mercury", "luna"]
 
-    expected = SkyfieldService.new(coordinates, bodies).body_data
+    expected = SkyfieldService.new(coordinates, bodies, "ephemerides").body_data
 
     expect(expected['data']['latitude']).to eq('41.345 N')
     expect(expected['data']['longitude']).to eq('41.112 W')

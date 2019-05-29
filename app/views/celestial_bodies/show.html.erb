@@ -10,7 +10,12 @@
       <img src="<%= facade.image %>" alt="Image of <%= facade.name %>">
   </div>
 
+
+
   <div class="tracking-button">
-    <%# <%= button_to "Point My Telescope at #{facade.name}", action: :create, controller: :telescope_controller  %> %>
+    <%= form_for :telescope, url: celestial_body_telescope_index_path(celestial_body_id: facade.body), method: :post do |f| %>
+      <%= f.hidden_field(:location, :value => facade.user_location) %>
+      <%= f.submit "Point My Telescope at #{facade.name}" %>
+    <% end %>
   </div>
 </div>

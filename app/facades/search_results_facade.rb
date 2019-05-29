@@ -18,7 +18,7 @@ class SearchResultsFacade
   def user_telescope_location
     "#{skyfield_data.body_data["data"]["latitude"]},#{skyfield_data.body_data["data"]["longitude"]}"
   end
-  
+
   def search_time
     skyfield_data.body_data['data']['time']
   end
@@ -38,6 +38,6 @@ class SearchResultsFacade
   end
 
   def skyfield_data
-    @_skyfield_data ||= SkyfieldService.new(mapbox_long_lat, @bodies)
+    @_skyfield_data ||= SkyfieldService.new(mapbox_long_lat, @bodies, "ephemerides")
   end
 end

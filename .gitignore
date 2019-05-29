@@ -31,3 +31,4 @@
 # Ignore application configuration
 /config/application.yml
 /config/credentials.yml.enc
+dump.rdb

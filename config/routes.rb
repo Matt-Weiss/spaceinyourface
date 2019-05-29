@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   get 'auth/google_oauth2/callback', to: 'sessions#create'
 
   resources :iss_search, only: [:index, :new]
+  
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 end

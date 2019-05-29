@@ -1,12 +1,41 @@
 .about_container {
-  
+  margin: auto;
 }
+
+#about_message {
+  border: 5px solid navy;
+  border-radius: 30px;
+  margin: auto;
+  width: 80%;
+}
+
+#about_message p {
+  margin: auto;
+  width: 90%;
+}
+
+#telescope_instructions {
+  border: 5px solid navy;
+  border-radius: 30px;
+  margin: auto;
+  width: 80%;
+}
+
+#telescope_instructions p {
+  margin: auto;
+  width: 90%;
+}
+
 #about_message p a {
   font-size: inherit;
   color:  inherit;
 }
 
 #credit_to {
+  border: 5px solid navy;
+  border-radius: 30px;
+  margin: auto;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

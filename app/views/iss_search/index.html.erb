@@ -2,8 +2,8 @@
 
 <div class="iss-search">
   <p>Search location: <%= facade.user_estimated_location %></p>
-  <p>Time of search: <%= facade.time_of_search %></p>
+  <p>Time of search: <%= local_time(facade.time_of_search) %></p>
 
-  <p>Next Rise Time: <%= facade.next_rise_time %></p>
+  <p>Next Rise Time: <%= local_time(facade.next_rise_time) %></p>
   <p>Duration: <%= facade.duration %> minutes </p>
 </div>

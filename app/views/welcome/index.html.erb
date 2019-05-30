@@ -10,17 +10,6 @@
     <div class="search-button">
       <p><%= link_to "SEARCH", new_search_path %></p>
     </div>
-    <div class="iss-search">
-      <%= form_tag('/iss_search', method: :get) do %>
-        <p id='location'>
-          <%= label_tag :location %>
-          <input type="input-field" name="location" title="location" id="location" placeholder="A street address A city or neighborhood A Postal Code A point of interest such as a public park">
-        </p>
-        <p id='submit'>
-          <%= submit_tag("Find ISS") %>
-        </p>
-      <% end %>
-    </div>
   </section>
 <% else %>
   <section class="search">

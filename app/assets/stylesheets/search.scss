@@ -1,9 +1,21 @@
 .search-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-body-box {
   margin: auto;
   width: 450px;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 25px;
+  border: 3px solid navy;
+}
+
+.iss-search {
+  margin: 0px 132px;
+  width: 450px;
   padding-top: 25px;
   border: 3px solid navy;
 }
@@ -37,6 +49,14 @@
 }
 
 #location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#iss_location {
   display: flex;
   flex-direction: column;
   justify-content: center;

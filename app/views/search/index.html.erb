@@ -19,4 +19,14 @@
       </section>
     <% end %>
   </div>
+
+  <div class="search-and-refresh">
+    <div class="new-search">
+      <%= link_to "New Search", new_search_path %>
+    </div>
+
+    <div class="refresh-search">
+      <input type="button" name="refresh" value="Refresh" onClick= "window.location.reload();" >
+    </div>
+  </div>
 </section>

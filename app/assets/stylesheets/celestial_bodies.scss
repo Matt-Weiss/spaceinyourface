@@ -1,24 +1,33 @@
 .body-box {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-}
-
-.body-title {
-  display: justify-content;
-  align-self: flex-start;
-}
-
-.body-description {
-  display: justify-content;
+  flex-direction: column;
   justify-content: center;
-  flex-grow: 100%;
-  flex-wrap: wrap;
 }
 
 .body-image {
-  display: justify-content;
-  padding-right: 50px;
-  align-self: flex-end;
+  margin: auto;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  padding: none;
+}
+
+.body-image img {
+  width: 25rem;
+  height: 25rem;
+}
+
+.tracking-button {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.body-description{
+  margin: auto;
+  border: 5px solid navy;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  width: 1152px;
 }

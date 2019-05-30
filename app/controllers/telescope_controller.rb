@@ -1,8 +1,15 @@
 class TelescopeController < ApplicationController
   def create
     ephemeris_data = SkyfieldService.new(user_coordinates, body_name, "telescope_tracking")
-    NgrokService.new(params[:ngrok_url], ephemeris_data)
-    flash[:message] = "Your telescope has now started tracking #{body_name[0]}!"
+    if params[:commit] == "Test"
+      test = NgrokService.new(params[:telescope][:ngrok_url].concat("/scopetest?"), ephemeris_data)
+      test.conn
+      flash[:message] = "Running range of motion test on your telescope."
+    else
+      motion = NgrokService.new(params[:telescope][:ngrok_url].concat("/scopetrack?"), ephemeris_data)
+      motion.conn
+      flash[:message] = "Your telescope has now started tracking #{body_name[0]}!"
+    end
     redirect_to celestial_body_path(body.name, location: user_coordinates)
   end
 

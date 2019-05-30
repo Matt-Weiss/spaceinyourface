@@ -15,7 +15,10 @@
   <div class="tracking-button">
     <%= form_for :telescope, url: celestial_body_telescope_index_path(celestial_body_id: facade.body), method: :post do |f| %>
       <%= f.hidden_field(:location, :value => facade.user_location) %>
+      <%= f.label :ngrok_url, "My Telescope's Address:" %>
+      <%= f.text_field :ngrok_url %>
       <%= f.submit "Point My Telescope at #{facade.name}" %>
+      <%= f.submit "Test" %>
     <% end %>
   </div>
 </div>

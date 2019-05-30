@@ -1,24 +1,20 @@
-<div class="body-box">
-  <div class="body-title">
-      <h1><%= facade.name %></h1>
-  </div>
-  <div class="body-description">
-      <%= facade.description %>
-  </div>
-
-  <div class="body-image">
+<div class="body-container">
+  <div class="body-box">
+    <h1><%= facade.name %></h1>
+    <div class="body-image">
       <img src="<%= facade.image %>" alt="Image of <%= facade.name %>">
-  </div>
-
-
-
-  <div class="tracking-button">
-    <%= form_for :telescope, url: celestial_body_telescope_index_path(celestial_body_id: facade.body), method: :post do |f| %>
-      <%= f.hidden_field(:location, :value => facade.user_location) %>
-      <%= f.label :ngrok_url, "My Telescope's Address:" %>
-      <%= f.text_field :ngrok_url %>
-      <%= f.submit "Point My Telescope at #{facade.name}" %>
-      <%= f.submit "Test" %>
-    <% end %>
+    </div>
+    <div class="tracking-button">
+      <%= form_for :telescope, url: celestial_body_telescope_index_path(celestial_body_id: facade.body), method: :post do |f| %>
+        <%= f.hidden_field(:location, :value => facade.user_location) %>
+        <%= f.label :ngrok_url, "My Telescope's Address:" %>
+        <%= f.text_field :ngrok_url %>
+        <%= f.submit "Point My Telescope at #{facade.name}" %>
+        <%= f.submit "Test" %>
+      <% end %>
+    </div>
+    <div class="body-description">
+        <p><%= facade.description %></p>
+    </div>
   </div>
 </div>

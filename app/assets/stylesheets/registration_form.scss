@@ -16,22 +16,26 @@ h4 {
 .registration-form #label{
   margin-bottom: 0;
   margin-left: 1rem;
+  width: 135px;
 }
 
 .registration-form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 #fields {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #field {
   margin: 0rem 1rem;
+
 }
 
 #submit {

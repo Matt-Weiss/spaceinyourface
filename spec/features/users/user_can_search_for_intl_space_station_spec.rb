@@ -13,12 +13,12 @@ describe 'Users can search for Intl space station' do
     user = create(:user)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit root_path
+    visit search_index_path
 
-    within ".iss-search" do
-      fill_in 'Location', with: '1331 17th St Denver, CO'
+
+      fill_in 'iss_location', with: '1331 17th St Denver, CO'
       click_button "Find ISS"
-    end
+
 
     expect(current_url).to include("location=1331+17th+St+Denver%2C+CO")
     expect(current_path).to eq(iss_search_index_path)

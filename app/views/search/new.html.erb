@@ -25,8 +25,8 @@
     <h4>International Space Station</h4>
     <%= form_tag('/iss_search', method: :get) do %>
     <p id='location'>
-      <%= label_tag :location %>
-      <input type="input-field" name="location" title="location" id="location" placeholder="A street address A city or neighborhood A Postal Code A point of interest such as a public park">
+      <%= label_tag :iss_location %>
+      <input type="input-field" name="iss_location" title="iss_location" id="iss_location" placeholder="A street address A city or neighborhood A Postal Code A point of interest such as a public park" class="location-field">
     </p>
     <p id='submit'>
       <%= submit_tag("Find ISS") %>

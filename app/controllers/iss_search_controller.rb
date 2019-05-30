@@ -7,6 +7,6 @@ class IssSearchController < ApplicationController
 
   private
     def iss_search_params
-      params.permit(:location)
+      params.permit(:iss_location)
     end
 end

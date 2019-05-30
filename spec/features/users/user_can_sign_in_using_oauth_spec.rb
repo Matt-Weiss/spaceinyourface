@@ -23,12 +23,14 @@ describe 'User can log in using OAuth' do
             }
         OmniAuth.config.mock_auth[:google_oauth2] = mock_auth_hash
 
-      click_button "Sign In Using Google"
+      within '.login-form' do
+        find(".google_button_image").click
+      end
 
       expect(current_path).to eq(root_path)
 
       user = User.last
-        
+
       expect(user.user_name).to eq("sammyspace")
       expect(user.email).to eq("sammyspace@gmail.com")
       expect(user.google_token).to eq("FakeToken1")

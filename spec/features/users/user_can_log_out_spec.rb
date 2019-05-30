@@ -17,8 +17,8 @@ describe 'A registered user can log out' do
       fill_in 'session[password]', with: 'password'
       click_button "Log In"
 
-      random_path = [root_path, new_search_path, search_index_path].sample
-      visit random_path
+      
+      visit root_path
 
       click_on "Log Out"
 

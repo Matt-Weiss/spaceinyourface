@@ -13,7 +13,6 @@ class SearchController < ApplicationController
     if valid_search?
       params.permit(:location, bodies:[])
     else
-      # flash[:errors] = "Must select at least one celestial body"
       render :new
     end
   end
@@ -25,7 +24,7 @@ class SearchController < ApplicationController
       flash[:errors] = "Must select at least one celestial body"
       false
     elsif !valid_location?
-      flash[:errors] = "Must enter location information"
+      flash[:errors] = "Invalid location entry, please try again"
       false
     end
   end
@@ -35,7 +34,9 @@ class SearchController < ApplicationController
   end
 
   def valid_location?
-    params[:location].present?
+    mapbox = MapboxService.new(params[:location])
+    
+    params[:location].present? && mapbox.valid?
   end
 
 end

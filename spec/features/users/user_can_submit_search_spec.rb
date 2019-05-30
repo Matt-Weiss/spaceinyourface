@@ -55,7 +55,6 @@ describe 'User can submit a search request' do
 
   context 'When I submit a request with no location information' do
     it 'shows me an error message, and I see the search form again' do
-
       visit new_search_path
 
       find(:css, "#bodies_[value='Luna']").set(true)
@@ -63,7 +62,28 @@ describe 'User can submit a search request' do
 
       click_button "Search"
 
-      expect(page).to have_content("Must enter location information")
+      expect(page).to have_content("Invalid location entry, please try again")
+      expect(page).to have_css(".search-box")
+      expect(current_path).to eq(search_index_path)
+    end
+  end
+
+  context 'When I submit a request with an invalid Mapbox API location' do
+    it 'shows me an error message, and I see the search form again' do
+      json_mapbox_response = File.open('./spec/fixtures/mapbox_invalid_data.json')
+      stub_request(:get, "https://api.mapbox.com/geocoding/v5/mapbox.places/80404.json?access_token=#{ENV['MAPBOX_API_KEY']}")
+      .to_return(status: 200, body: json_mapbox_response)
+
+      visit new_search_path
+
+      find(:css, "#bodies_[value='Luna']").set(true)
+      find(:css, "#bodies_[value='Mars']").set(true)
+
+      fill_in 'Location', with: '80404'
+
+      click_button "Search"
+
+      expect(page).to have_content("Invalid location entry, please try again")
       expect(page).to have_css(".search-box")
       expect(current_path).to eq(search_index_path)
     end

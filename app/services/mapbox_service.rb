@@ -1,10 +1,16 @@
 class MapboxService
+  attr_reader :location
+
   def initialize(location)
     @location = location
   end
 
   def returned_locations
     get_json(format_location)
+  end
+
+  def valid?
+    get_json(format_location)['features'].present?
   end
 
 private
@@ -23,6 +29,6 @@ private
   end
 
   def format_location
-    @location.downcase.gsub(' ', '%20')
+    location.downcase.gsub(' ', '%20')
   end
 end

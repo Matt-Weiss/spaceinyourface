@@ -10,8 +10,6 @@
       <p id='label'><%= f.label :email  %></p>
       <p id='field'><%= f.email_field :email %></p>
     </div>
-  </div>
-  <div id='fields'>
     <div>
       <p id='label'><%= f.label :password  %></p>
       <p id='field'><%= f.password_field :password %></p>
@@ -23,4 +21,6 @@
   </div>
   <p id='submit'><%= f.submit 'Create Account' %></p>
   <% end %>
+
+  <%= link_to image_tag('btn_google_signin_dark_normal_web.png'), '/auth/google_oauth2', { class: 'google_button_image' } %>
 </section>

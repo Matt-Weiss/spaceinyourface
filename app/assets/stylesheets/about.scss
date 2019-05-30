@@ -1,20 +1,39 @@
 .about_container {
-  
+  margin: auto;
 }
+
+.about_box {
+  border: 5px solid navy;
+  border-radius: 30px;
+  margin: auto;
+  width: 1152px;
+}
+
+.about_box p {
+  margin: auto;
+  width: 90%;
+  padding: 10px
+}
+
 #about_message p a {
   font-size: inherit;
   color:  inherit;
 }
 
 #credit_to {
+  border: 5px solid navy;
+  border-radius: 30px;
+  margin: auto;
+  width: 1152px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-#credit_to p  {
+#credit_to p {
   padding: 0;
   margin: 0;
+  padding: 10px;
 }
 
 #credit_to p a {

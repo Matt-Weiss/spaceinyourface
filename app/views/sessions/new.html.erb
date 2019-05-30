@@ -13,5 +13,5 @@
     <p id='submit'><%= f.submit 'Log In' %></p>
   <% end %>
 
-  <%= button_to "Sign In Using Google", '/auth/google_oauth2'%>
+  <%= link_to image_tag('btn_google_signin_dark_normal_web.png'), '/auth/google_oauth2', { class: 'google_button_image' } %>
 </section>

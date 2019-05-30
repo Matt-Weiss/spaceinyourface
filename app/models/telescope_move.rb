@@ -9,7 +9,7 @@ class TelescopeMove
   def move_to_start_dec
     if @ephemeris_data['start_dec'].to_f > 0
       dec_steps = ((90 - @ephemeris_data['start_dec'].to_f) * 30).to_i
-      @total_steps[:dec_steps] += dec_steps
+      @total_steps['dec_steps'] += dec_steps
     else
       dec_steps = -((90 + @ephemeris_data['start_dec'].to_f) * 30).to_i
       @total_steps['dec_steps'] += dec_steps

@@ -10,7 +10,7 @@
   width: 600px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .celestial-body {
@@ -36,7 +36,6 @@
 
 .search-and-refresh div {
   margin: auto;
-  width: 145px;
   display: inline-block;
   text-align: center;
   padding: 2rem;

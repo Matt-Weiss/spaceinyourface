@@ -1,0 +1,16 @@
+
+.flash-message > * {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold
+}
+
+.success {
+  background: green;
+}
+
+.errors {
+  background: darkred;
+}

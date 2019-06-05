@@ -4,9 +4,8 @@
 
 .about_box {
   border: 5px solid navy;
-  border-radius: 30px;
   margin: auto;
-  width: 1152px;
+  width: 80%;
 }
 
 .about_box p {
@@ -22,9 +21,8 @@
 
 #credit_to {
   border: 5px solid navy;
-  border-radius: 30px;
   margin: auto;
-  width: 1152px;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

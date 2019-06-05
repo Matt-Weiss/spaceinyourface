@@ -1,15 +1,9 @@
-<section class="hero-image">
-  <div class="hero-image-text">
-    SPACE IN YOUR FACE
-  </div>
-  <img src="https://www.rebornevo.com/forum/uploads/monthly_2017_07/banner2.png.3adb9e0c7eee3d488000e87bcbfaf457.png" >
-</section>
+
+<div class='page--index' style="background-image: url('https://www.rebornevo.com/forum/uploads/monthly_2017_07/banner2.png.3adb9e0c7eee3d488000e87bcbfaf457.png')"
 
 <% if current_user %>
   <section class="search">
-    <div class="search-button">
-      <p><%= link_to "SEARCH", new_search_path %></p>
-    </div>
+    <%= link_to "SEARCH", new_search_path, class: "search-button" %>
   </section>
 <% else %>
   <section class="search">
@@ -19,8 +13,10 @@
   </section>
 <% end %>
 
-<section class="welcome-content">
+<section class="welcome-content border-blue">
   <p>Welcome to Space In Your Face</p>
   <p>Where all of space is brought to your face</p>
   <p>In one convenient place.</p>
 </section>
+
+</div>

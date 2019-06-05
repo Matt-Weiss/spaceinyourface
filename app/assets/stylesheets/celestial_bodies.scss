@@ -1,3 +1,17 @@
+.tracking-button form {
+  background: white;
+  color: black;
+  padding: 15px;
+}
+
+.body-container {
+  min-height: calc(100vh - 63px);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
 .body-box {
   display: flex;
   flex-direction: column;
@@ -29,5 +43,8 @@
   border-radius: 30px;
   display: flex;
   justify-content: center;
-  width: 1152px;
+  width: 80%;
+  background: white;
+  color: black;
+  padding: 10px;
 }

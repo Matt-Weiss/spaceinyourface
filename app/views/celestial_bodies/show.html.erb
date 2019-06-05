@@ -1,9 +1,6 @@
-<div class="body-container">
+<div class="body-container" style="background-image: url('<%= facade.image %>')">
   <div class="body-box">
     <h1><%= facade.name %></h1>
-    <div class="body-image">
-      <img src="<%= facade.image %>" alt="Image of <%= facade.name %>">
-    </div>
     <div class="tracking-button">
       <%= form_for :telescope, url: celestial_body_telescope_index_path(celestial_body_id: facade.body), method: :post do |f| %>
         <%= f.hidden_field(:location, :value => facade.user_location) %>

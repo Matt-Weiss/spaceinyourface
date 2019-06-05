@@ -1,23 +1,21 @@
+
+.page--index {
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: calc(100vh - 63px);
+  padding-top: 50px;
+}
+
 .hero-image {
   position: relative;
   padding-top: 25px;
   padding-bottom: 25px;
 }
 
-.hero-image img {
-  width: 100%;
-}
-
-.hero-image-text {
-  position: absolute;
-  font-size: 40px;
-  top: 40%;
-  left: 10%;
-  color: white;
-}
-
 .search-button {
-  margin: auto;
+  background: white;
+  margin: 20px auto;
   display: inline-block;
   font-size: 40px;
   padding-top: 25px;
@@ -37,8 +35,13 @@
 }
 
 .sign-up-message {
-  margin: auto;
-  display: inline-block;
+
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+
+  background: white;
+
   font-size: 25px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -52,9 +55,11 @@
 
 .welcome-content {
   margin: auto;
+  margin-top: 50px;
   text-align: center;
   font-size: 30px;
   width: 75%;
   padding-top: 25px;
   padding-bottom: 25px;
+  background: white;
 }

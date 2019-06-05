@@ -14,9 +14,9 @@
       <label for="phone">Enter your phone number to schedule a text message alert 15 mins prior to next rise time (<%= local_time(facade.next_rise_time - (15 * 60)) %>):</label>
 
       <input type="tel" id="phone" name="phone"
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-        placeholder="Format: 123-456-7890"
-        title="Format: 123-456-7890"
+        pattern="[0-9]{10}"
+        placeholder="Format: 1234567890"
+        title="Format: 1234567890"
         required>
 
       <%= hidden_field_tag :scheduled_time, (facade.next_rise_time - (15 * 60)) %>

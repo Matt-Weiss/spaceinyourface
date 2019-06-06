@@ -1,0 +1,2 @@
+class NasaImage < ApplicationRecord
+end

@@ -14,21 +14,22 @@
 }
 
 .search-button {
-  background: white;
+  background-color: rgba(34,37,43,0.75);
+  color: white;
   margin: 20px auto;
   display: inline-block;
   font-size: 40px;
   padding-top: 25px;
   padding-bottom: 25px;
   padding: 30px;
-  border-style: solid;
-  border-color: navy;
-  border-width: 5px;
-  border-radius: 30px;
-  border-spacing: 10px;
+  // border-style: solid;
+  // border-color: navy;
+  // border-width: 5px;
+  // border-spacing: 10px;
 }
 
 .search {
+  align-self: center;
   display: flex;
   flex-wrap: wrap;
   padding-top: 25px;
@@ -39,8 +40,8 @@
   display: block;
   margin: 0 auto;
   width: 75%;
-
-  background: white;
+  color: white;
+  background-color: rgba(34,37,43,0.75);
 
   font-size: 25px;
   padding-top: 25px;
@@ -49,7 +50,6 @@
   border-style: solid;
   border-color: navy;
   border-width: 5px;
-  border-radius: 30px;
   border-spacing: 10px;
 }
 
@@ -61,5 +61,5 @@
   width: 75%;
   padding-top: 25px;
   padding-bottom: 25px;
-  background: white;
+  background-color: rgba(34,37,43,0.75);
 }

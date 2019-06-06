@@ -12,6 +12,6 @@ class IssAlertsController < ApplicationController
     alert = TextAlert.perform_at(scheduled_time, phone_number, message)
 
     flash[:message] = "#{formatted_phone_number} - Text message successfully scheduled for next ISS rise time: #{formatted_rise_time}."
-    redirect_to root_path
+    redirect_to new_search_path
   end
 end

@@ -16,21 +16,12 @@
         <input type="input-field" name="location" title="location" id="location" placeholder="A street address, A city or neighborhood, A postal code, A point of interest" class="location-field">
       </p>
       <p id='submit'>
-        <%= submit_tag("Search") %>
+        <%= button_tag "Planet Search" , value: :planet_search %>
+      </p>
+
+      <h1>Find the International Space Station</h1>
+      <p id='submit'>
+        <%= button_tag "Find ISS" , value: :iss_search %>
       </p>
     <% end %>
   </section>
-
-  <div class="iss-search">
-    <h4>International Space Station</h4>
-    <%= form_tag('/iss_search', method: :get) do %>
-    <p id='location'>
-      <%= label_tag :iss_location %>
-      <input type="input-field" name="iss_location" title="iss_location" id="iss_location" placeholder="A street address A city or neighborhood A Postal Code A point of interest such as a public park" class="location-field">
-    </p>
-    <p id='submit'>
-      <%= submit_tag("Find ISS") %>
-    </p>
-    <% end %>
-  </div>
-</div>

@@ -1,3 +1,4 @@
+<% if params[:button] == "planet_search" %>
 <h1>Search Results</h1>
 
 <section class="search-results">
@@ -30,3 +31,36 @@
     </div>
   </div>
 </section>
+
+<% else %>
+
+<h1>Find the International Space Station</h1>
+<div class="iss-search-result-container">
+  <div class="iss-search-result">
+    <p>Search location: <%= @facade.user_estimated_location %></p>
+    <p>Time of search: <%= local_time(@facade.time_of_search) %></p>
+
+    <p>Next Rise Time: <%= local_time(@facade.next_rise_time) %></p>
+    <p>Duration: <%= @facade.duration %> minutes </p>
+  </div>
+</div>
+<div class="text-alert-container">
+  <div class="text-alert-form">
+    <%= form_tag('/iss_alerts', method: :get) do %>
+      <label for="phone">Enter your phone number to schedule a text message alert 15 mins prior to next rise time (<%= local_time(@facade.next_rise_time - (15 * 60)) %>):</label>
+
+      <input type="tel" id="phone" name="phone"
+        pattern="[0-9]{10}"
+        placeholder="Format: 1234567890"
+        title="Format: 1234567890"
+        required>
+
+      <%= hidden_field_tag :scheduled_time, (@facade.next_rise_time - (15 * 60)) %>
+      <p id='submit'>
+        <%= submit_tag("Schedule text message") %>
+      </p>
+    <% end %>
+  </div>
+</div>
+
+<% end %>

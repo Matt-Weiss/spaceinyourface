@@ -5,14 +5,18 @@ class SearchController < ApplicationController
   end
 
   def index
-    @facade = SearchResultsFacade.new(search_params)
+    if params[:button] == "planet_search"
+      @facade = SearchResultsFacade.new(search_params)
+    elsif params[:button] == "iss_search"
+      @facade = IssSearchResultFacade.new(iss_search_params)
+    end
   end
 
   private
 
   def search_params
     if valid_search?
-      params.permit(:location, bodies:[])
+      params.permit(:location, :button, bodies:[])
     else
       render :new
     end
@@ -36,8 +40,19 @@ class SearchController < ApplicationController
 
   def valid_location?
     mapbox = MapboxService.new(params[:location])
-    
+
     params[:location].present? && mapbox.valid?
+  end
+
+  def iss_search_params
+    if valid_location?
+      params.permit(:location, :button)
+    else
+      flash[:errors] = "Invalid location entry, please try again"
+      render :new
+    end
+
+
   end
 
 end

@@ -1,6 +1,6 @@
 class IssSearchResultFacade
   def initialize(iss_search_params)
-    @raw_location = iss_search_params['iss_location']
+    @raw_location = iss_search_params['location']
   end
 
   def user_estimated_location

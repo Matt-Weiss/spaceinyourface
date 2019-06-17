@@ -1,7 +1,7 @@
 <div class="body-container" style="background-image: url('<%= facade.image %>')">
   <div class="body-box">
     <h1><%= facade.name %></h1>
-    <div class="tracking-button">
+    <div class="tracking-button body-description">
       <%= form_for :telescope, url: celestial_body_telescope_index_path(celestial_body_id: facade.body), method: :post do |f| %>
         <%= f.hidden_field(:location, :value => facade.user_location) %>
         <%= f.label :ngrok_url, "My Telescope's Address:" %>

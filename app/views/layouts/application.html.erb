@@ -10,11 +10,15 @@
 
   <body>
     <%= render 'partials/nav' %>
-    <div class="flash-message">
-      <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: name %>
-      <% end %>
+    <% cache do %>
+      <div class="body-container" style="background-image: url(https://apod.nasa.gov/apod/image/1903/M104_Hubble_rba.jpg)">
+    <% end %>
+      <div class="flash-message">
+        <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: name %>
+        <% end %>
+      </div>
+      <%= yield %>
     </div>
-    <%= yield %>
   </body>
 </html>

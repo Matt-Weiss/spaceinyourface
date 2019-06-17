@@ -4,8 +4,10 @@
 }
 
 .iss-search-result {
+  margin-top: 5%;
   padding: 1.5rem;
-  border: 3px solid navy;
+  background-color: rgba(34,37,43,0.75);
+  // border: 3px solid navy;
 }
 
 .text-alert-container {
@@ -28,6 +30,10 @@
 .text-alert-form form input {
   display: block;
   margin: 0 auto;
+}
+
+.pass-info {
+  margin-left: 2rem;
 }
 
 #phone {

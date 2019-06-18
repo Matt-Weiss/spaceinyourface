@@ -57,11 +57,18 @@
   padding: 10px;
 }
 
-#location label {
+#location-search-box label {
   padding-bottom: 10px;
 }
 
-#location {
+#status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#location-search-box {
   display: flex;
   flex-direction: column;
   justify-content: center;

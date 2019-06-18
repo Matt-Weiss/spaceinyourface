@@ -14,7 +14,7 @@
  *= require_self
  */
 
- @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Droid+Serif|Roboto:300');
 
 body {
   width: 100%;
@@ -22,14 +22,16 @@ body {
   max-width: 2000px;
   margin: auto;
   padding: 0px;
-  background-color: white;
+  background-color: rgb(34,37,43);
   background-size:  100%;
-  font-family: 'Lato', verdana;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
 h1 {
   display: flex;
   justify-content: center;
+  color: white;
 }
 
 p {
@@ -59,6 +61,14 @@ input[type="checkbox"] {
   width: 100%;
   left: 0;
   margin: 0;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: orange;
 }
 
 input[type="checkbox"] + label:before {

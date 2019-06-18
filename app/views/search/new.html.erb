@@ -1,19 +1,35 @@
-<h1>New Search</h1>
-<div class="search-box">
-  <section class='search-body-box'>
-    <h4>Celestial Body Search</h4>
-    <%= form_tag('/search', method: :get) do %>
-    <div class="body-choices">
-      <% celestial_bodies.each do |body| %>
-          <div class='check-box'%>
-            <%= check_box_tag 'bodies[]', body.name %>
-            <%= label_tag body.name %>
-          </div>
+<div class="search-container">
+  <div class="page-spacer">
+
+  </div>
+  <div class="search-box">
+    <section class='search-body-box'>
+      <h4>Celestial Body Search</h4>
+      <%= form_tag('/search', method: :get) do %>
+      <div class="body-choices">
+        <% celestial_bodies.each do |body| %>
+            <div class='check-box'%>
+              <%= check_box_tag 'bodies[]', body.name %>
+              <%= label_tag body.name %>
+            </div>
+        <% end %>
+      </div>
+        <p id='location'>
+          <%= label_tag :location %>
+          <input type="input-field" name="location" title="location" id="location" placeholder="A street address, A city or neighborhood, A postal code, A point of interest" class="location-field">
+        </p>
+        <p id='submit'>
+          <%= submit_tag("Search") %>
+        </p>
       <% end %>
-    </div>
+    </section>
+
+    <div class="iss-search">
+      <h4>International Space Station</h4>
+      <%= form_tag('/iss_search', method: :get) do %>
       <p id='location'>
-        <%= label_tag :location %>
-        <input type="input-field" name="location" title="location" id="location" placeholder="A street address, A city or neighborhood, A postal code, A point of interest" class="location-field">
+        <%= label_tag :iss_location %>
+        <input type="input-field" name="iss_location" title="iss_location" id="iss_location" placeholder="A street address A city or neighborhood A Postal Code A point of interest such as a public park" class="location-field">
       </p>
       <p id='submit'>
         <%= button_tag "Planet Search" , value: :planet_search %>

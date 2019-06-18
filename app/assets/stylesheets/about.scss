@@ -1,9 +1,24 @@
-.about_container {
+.page-container {
+  display: flex;
   margin: auto;
+}
+.page-card {
+  width: 33%;
+  // border: 5px solid red;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-card.wide {
+  width: 140%;
 }
 
 .about_box {
-  border: 5px solid navy;
+  background-color: rgba(34,37,43,0.75);
+
+  // border: 5px solid navy;
   margin: auto;
   width: 80%;
 }
@@ -14,13 +29,15 @@
   padding: 10px
 }
 
+
 #about_message p a {
   font-size: inherit;
   color:  inherit;
 }
 
 #credit_to {
-  border: 5px solid navy;
+  background-color: rgba(34,37,43,0.75);
+  // border: 5px solid navy;
   margin: auto;
   width: 80%;
   display: flex;

@@ -10,11 +10,16 @@
 
 .topnav a {
   float: left;
-  color: #2F4F4F;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 18px;
+}
+
+.logo-title {
+  display: flex;
+  flex-direction: row;
 }
 
 .small-logo {
@@ -33,7 +38,10 @@
 }
 
 .nav-title {
-  font-size: 20px;
+  align-self: left;
+  margin: auto;
+  font-size: 2rem;
+  margin-left: 1rem;
   font-weight: 900;
 }
 
@@ -44,7 +52,7 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(70, 56, 63);
 }
 
 /* Add a color to the active/current link */

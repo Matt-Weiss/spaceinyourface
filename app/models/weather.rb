@@ -7,7 +7,7 @@ class Weather
               :precipProbability
 
   def initialize(attribute)
-    @time = Time.at(attribute[:time]).strftime("%I %p")
+    @time = Time.at(attribute[:time])
     @summary = attribute[:summary]
     @icon = icons[:"#{attribute[:icon]}"]
     @temperature = attribute[:temperature].to_i

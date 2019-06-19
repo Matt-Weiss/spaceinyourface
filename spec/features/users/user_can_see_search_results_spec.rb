@@ -21,7 +21,7 @@ describe 'User can see search results' do
 
 
     json_darksky_response = File.open('./spec/fixtures/darksky_data.json')
-    stub_request(:get, "https://api.darksky.net/forecast/#{ENV['DARK_SKY_API']}/39.750772,-104.996446")
+    stub_request(:get, "https://api.darksky.net/forecast/#{ENV['DARK_SKY_API']}/39.750772,-104.996446?exclude=currently,minutely,daily,alerts,flags")
       .to_return(status: 200, body: json_darksky_response)
 
 

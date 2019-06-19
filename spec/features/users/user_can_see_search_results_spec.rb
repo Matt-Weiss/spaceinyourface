@@ -29,7 +29,7 @@ describe 'User can see search results' do
 
     location = '1331 17th St Denver, CO'
 
-    fill_in 'Location', with: location
+    fill_in 'location', with: location
 
     click_button "Search"
 

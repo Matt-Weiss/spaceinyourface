@@ -12,11 +12,13 @@ function geoFindMe() {
       .then(function(data) {
         let placeName = data.features[0]['place_name']
         document.getElementById("location").value = placeName;
+        document.querySelector('#browser-location').setAttribute('class', 'location-success')
       })
     status.textContent = '';
   }
 
   function error() {
+    document.querySelector('#browser-location').setAttribute('class', 'location-default')
     status.textContent = 'Unable to retrieve your location';
   }
 
@@ -24,6 +26,7 @@ function geoFindMe() {
     status.textContent = 'Geolocation is not supported by your browser';
   } else {
     status.textContent = 'Finding your location...';
+    document.querySelector('#browser-location').setAttribute('class', 'location-default')
     navigator.geolocation.getCurrentPosition(success, error);
   }
 }

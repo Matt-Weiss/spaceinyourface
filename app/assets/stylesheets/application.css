@@ -16,6 +16,10 @@
 
  @import url('https://fonts.googleapis.com/css?family=Droid+Serif|Roboto:300');
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   min-width: 500px;
@@ -39,8 +43,6 @@ h1 {
 p {
   margin: 5px;
 }
-
-
 
 a {
   color: white;

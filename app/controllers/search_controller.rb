@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def new
-    PingSkyfieldJob.perform_now
+    PingSkyfieldJob.perform_async
   end
 
   def index

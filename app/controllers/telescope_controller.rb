@@ -1,10 +1,8 @@
 class TelescopeController < ApplicationController
   def create
     if params[:commit] == "Test"
-      # ephemeris_data =
-      # test = NgrokService.new(params[:telescope][:ngrok_url].concat("/scopetest?"), ephemeris_data)
-      # test.test_conn
-      NgrokService.test_conn(params[:telescope][:ngrok_url])
+      TelescopeTestJob.perform_async(params[:telescope][:ngrok_url])
+
       flash[:message] = "Running range of motion test on your telescope."
     else
       ephemeris_data = SkyfieldService.new(user_coordinates, body_name, "telescope_tracking")

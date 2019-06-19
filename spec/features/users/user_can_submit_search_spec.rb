@@ -36,7 +36,8 @@ describe 'User can submit a search request' do
 
       click_button "Search"
 
-      expect(current_url).to include("bodies[]=Luna&bodies[]=Mars&location=1331+17th+St+Denver%2C+CO")
+      expect(current_url).to include("bodies[]=Luna&bodies[]=Mars")
+      expect(current_url).to include("location=1331+17th+St+Denver%2C+CO")
       expect(current_path).to eq(search_index_path)
     end
   end

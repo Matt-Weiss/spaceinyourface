@@ -43,7 +43,7 @@ describe 'User can see search results' do
     expect(current_path).to eq(search_index_path)
     expect(page).to have_content("My Location: 1331 17th Street, Denver, Colorado 80202, United States")
 
-    expect(page.all('ul')[0]).to have_content('11 AM')
+    expect(page.all('ul')[0]).to have_content('05 PM')
     expect(page.all('ul')[0]).to have_css("img[src*='#{@image}']")
     expect(page.all('ul')[0]).to have_content('Temperature: 75°')
     expect(page.all('ul')[0]).to have_content('Cloud Coverage: 32%')

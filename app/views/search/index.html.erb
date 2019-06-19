@@ -33,7 +33,7 @@
     <section class='hourly_weather'>
       <div class="hour_weather">
         <ul>
-          <li><%= hour.time %></li>
+          <li><%= local_time(hour.time, '%I %p') %></li>
           <li><%= image_tag hour.icon %></li>
           <li><%= hour.summary %></li>
           <li>Temperature: <%= hour.temperature %>°</li>

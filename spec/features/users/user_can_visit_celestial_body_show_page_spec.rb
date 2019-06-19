@@ -19,6 +19,10 @@ describe 'As a registered user I can visit the celestial body show page' do
     json_search_index_response = File.open('./spec/fixtures/search_data.json')
     stub_request(:get, "https://skyfield-json.herokuapp.com/ephemerides?bodies=luna,mars&latitude=39.750772_N&longitude=104.996446_W")
       .to_return(status: 200, body: json_search_index_response)
+
+    json_darksky_response = File.open('./spec/fixtures/darksky_data.json')
+    stub_request(:get, "https://api.darksky.net/forecast/#{ENV['DARK_SKY_API']}/39.750772,-104.996446")
+      .to_return(status: 200, body: json_darksky_response)
   end
 
   it "and see the body's name and a brief description" do

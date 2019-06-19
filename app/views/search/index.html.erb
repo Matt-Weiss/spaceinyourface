@@ -1,10 +1,8 @@
 <% if params[:button] == "planet_search" %>
 <h1>Search Results</h1>
-
 <section class="search-results">
   <h4>My Location: <%= @facade.user_estimated_location %></h4>
   <h4 id="search-time">Search Time: <%= local_time(@facade.search_time) %></h4>
-
   <div class="results">
     <% @facade.body_results.each do |body| %>
       <section class="celestial-body">
@@ -29,6 +27,22 @@
     <div class="refresh-search">
       <input type="button" name="refresh" value="Refresh" onClick= "window.location.reload();" >
     </div>
+  </div>
+  <div class="weather">
+    <% @facade.weather.each do |hour| %>
+    <section class='hourly_weather'>
+      <div class="hour_weather">
+        <ul>
+          <li><%= hour.time %></li>
+          <li><%= image_tag hour.icon %></li>
+          <li><%= hour.summary %></li>
+          <li>Temperature: <%= hour.temperature %>°</li>
+          <li>Cloud Coverage: <%= hour.cloud_cover_percentage %>%</li>
+          <li>Chance of Rain: <%= hour.precipProbability %>%</li>
+        </ul>
+      </div>
+    </section>
+    <% end %>
   </div>
 </section>
 

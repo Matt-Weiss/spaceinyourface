@@ -33,7 +33,7 @@ describe 'As a registered user I can visit the celestial body show page' do
 
     location = '1331 17th St Denver, CO'
 
-    fill_in 'Location', with: location
+    fill_in 'location', with: location
 
     click_button "Search"
 

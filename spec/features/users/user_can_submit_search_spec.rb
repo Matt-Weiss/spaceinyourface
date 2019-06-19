@@ -36,7 +36,7 @@ describe 'User can submit a search request' do
 
       expect(page).to have_selector(".location-field[placeholder='#{location_directions}']")
 
-      fill_in 'Location', with: '1331 17th St Denver, CO'
+      fill_in 'location', with: '1331 17th St Denver, CO'
 
       click_button "Search"
 
@@ -51,7 +51,7 @@ describe 'User can submit a search request' do
 
       visit new_search_path
 
-      fill_in 'Location', with: 80203
+      fill_in 'location', with: 80203
 
       click_button "Search"
 
@@ -87,7 +87,7 @@ describe 'User can submit a search request' do
       find(:css, "#bodies_[value='Luna']").set(true)
       find(:css, "#bodies_[value='Mars']").set(true)
 
-      fill_in 'Location', with: '80404'
+      fill_in 'location', with: '80404'
 
       click_button "Search"
 

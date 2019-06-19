@@ -3,5 +3,9 @@
   "private": true,
   "dependencies": {
     "local-time": "^2.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.34.0",
+    "webpack-dev-server": "^3.7.2"
   }
 }

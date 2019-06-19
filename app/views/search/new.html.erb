@@ -13,6 +13,7 @@
       </div>
 
       <h1>Find a Celestial Body</h1>
+
       <div class="body-choices">
         <% celestial_bodies.each do |body| %>
             <div class='check-box'%>
@@ -20,11 +21,13 @@
               <%= label_tag body.name %>
             </div>
         <% end %>
+
       </div><br />
 
       <p id='submit'>
         <%= button_tag "Planet Search" , value: :planet_search %>
       </p>
+
 
       <h1>Find the International Space Station</h1>
       <p id='submit'>

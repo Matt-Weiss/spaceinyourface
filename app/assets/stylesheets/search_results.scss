@@ -1,9 +1,23 @@
 .search-results {
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.weather {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(34,37,43,0.75);
+  width: 65rem;
+}
+.hourly_weather {
+  margin: auto;
+  justify-content: space-between;
+}
+
+.hour_weather li {
+  list-style: none;
 }
 
 .results {

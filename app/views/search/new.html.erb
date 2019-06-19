@@ -1,23 +1,28 @@
 <h1>New Search</h1>
+
 <div class="search-box">
   <section class='search-body-box'>
-    <h4>Celestial Body Search</h4>
     <%= form_tag('/search', method: :get) do %>
-    <div class="body-choices">
-      <% celestial_bodies.each do |body| %>
-          <div class='check-box'%>
-            <%= check_box_tag 'bodies[]', body.name %>
-            <%= label_tag body.name %>
-          </div>
-      <% end %>
-    </div>
-      <p id='location'>
-        <%= label_tag :location %>
-        <input type="input-field" name="location" title="location" id="location" placeholder="A street address, A city or neighborhood, A postal code, A point of interest" class="location-field">
-      </p>
-      <p id='submit'>
-        <%= button_tag "Planet Search" , value: :planet_search %>
-      </p>
+    <p id="location-search-box">
+      <%= label_tag :location %>
+      <input type="input-field" name="location" title="location" id="location" placeholder="A street address, A city or neighborhood, A postal code, A point of interest" class="location-field">
+      <br><button id='browser-location' type='button'>Find My Location</button>
+      <p id='status'></p>
+    </p>
+
+      <h1>Celestial Body Search</h1>
+      <div class="body-choices">
+        <% celestial_bodies.each do |body| %>
+            <div class='check-box'%>
+              <%= check_box_tag 'bodies[]', body.name %>
+              <%= label_tag body.name %>
+            </div>
+        <% end %>
+      </div></br>
+
+    <p id='submit'>
+      <%= button_tag "Planet Search" , value: :planet_search %>
+    </p>
 
       <h1>Find the International Space Station</h1>
       <p id='submit'>

@@ -42,26 +42,24 @@
   justify-content: space-around;
 }
 
-.check-box {
-  width: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  color: white;
-  padding: 10px;
-}
-
 .location-field {
   text-align: center;
   width: 400px;
   padding: 10px;
 }
 
-#location label {
+#location-search-box label {
   padding-bottom: 10px;
 }
 
-#location {
+#status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#location-search-box {
   display: flex;
   flex-direction: column;
   justify-content: center;

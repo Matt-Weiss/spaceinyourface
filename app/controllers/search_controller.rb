@@ -16,6 +16,7 @@ class SearchController < ApplicationController
 
   def search_params
     if valid_search?
+      session[:location] = params[:location]
       params.permit(:location, :button, bodies:[])
     else
       render :new
@@ -47,6 +48,7 @@ class SearchController < ApplicationController
   def iss_search_params
     if valid_location?
       params.permit(:location, :button)
+
     else
       flash[:errors] = "Invalid location entry, please try again"
       render :new

@@ -6,7 +6,7 @@
         <h1 id="location-header">Enter Your Location</h1>
         <h5 id="pin-header">Or click pin to use browser location</h5>
         <div class="location-search">
-          <input type="input-field" name="location" title="location" id="location" placeholder="A street address, A city or neighborhood, A postal code, A point of interest" class="location-field"></input>
+          <input type="input-field" name="location" title="location" id="location" placeholder="A street address, A city or neighborhood, A postal code, A point of interest" class="location-field" value="<%= session[:location] %>"></input>
           <br />
           <%=image_tag('pin.green.png', id: 'browser-location', class: 'location-default') %>
         </div>

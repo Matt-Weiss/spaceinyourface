@@ -55,7 +55,8 @@
         title="Format: 1234567890"
         required>
 
-      <%= hidden_field_tag :scheduled_time, (@facade.next_rise_time - (15 * 60)) %>
+      <%= hidden_field_tag :rise_time, @facade.next_rise_time %>
+      <%= hidden_field_tag :location, @facade.mapbox_long_lat %>
       <p id='submit'>
         <%= submit_tag("Schedule text message") %>
       </p>

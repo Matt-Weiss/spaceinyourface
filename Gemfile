@@ -22,6 +22,7 @@ gem 'pg'
 gem 'local_time'
 gem 'sidekiq'
 gem 'sinatra'
+gem 'timezone', '~> 1.0'
 gem 'twilio-ruby'
 gem 'redis'
 

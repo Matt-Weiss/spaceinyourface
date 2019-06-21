@@ -3,20 +3,12 @@
 ## About
 Is a group project that took place during Mod 3 at Turing School of Software & Design. This team included [Jeremy Bennett](https://github.com/JaxJafinPapau), [Deonte Cooper](https://github.com/djc00p), [Matt Levy](https://github.com/milevy1), [Corey Sheesley](https://github.com/CSheesley?tab=repositories), and [Matt Weiss](https://github.com/Matt-Weiss).
 
-Users of our application are able to select a range of celestial bodies that they would like to observe, and input a location based on a range of geographic options. Once submitted, the user then receives valuable information for when and where to look for the objects that they have selected: 
+Users of our application are able to select a range of celestial bodies that they would like to observe, and input a location based on a range of geographic options. Once submitted, the user then receives valuable information for when and where to look for the objects that they have selected:
 
 #### Example:
-```
-INSERT SCREEN SHOT INSTEAD
-  Name: "Mercury"
-  Time: "2019-05-27 15:52:18"
-    decimal_attributes: {
-    ra: "4.778648664415373",
-    dec: "23.67915462647844",
-    az: "208.18889336319882",
-    el: "70.52100842964909"
-```
-Additionally, users who have a telescope and the necessary hardware can connect to our app, click a `search with telescope` button, and their telescope will locate that object in the sky. This telescope can then automatically track the object through the night sky using motor mounts. 
+![mock_search](search_example.png)
+
+Additionally, users who have a telescope and the necessary hardware can connect to our app, click a `search with telescope` button, and their telescope will locate that object in the sky. This telescope can then automatically track the object through the night sky using motor mounts.
 
 ## Future Iterations
 Add information here at the end of project

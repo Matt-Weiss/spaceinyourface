@@ -26,10 +26,10 @@ class SearchController < ApplicationController
     if valid_bodies? && valid_location?
       true
     elsif !valid_bodies?
-      flash[:errors] = "Must select at least one celestial body"
+      flash.now[:errors] = "Must select at least one celestial body"
       false
     elsif !valid_location?
-      flash[:errors] = "Invalid location entry, please try again"
+      flash.now[:errors] = "Invalid location entry, please try again"
       false
     end
   end

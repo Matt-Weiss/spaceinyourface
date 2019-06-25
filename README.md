@@ -9,10 +9,11 @@ SIYF is a group effort originating during Module 3 at Turing School of Software 
 
 #### Celestial Body Search:
 
-![mock_search](search_example.png)
+![mock_search](cb_search_example.png)
 
 #### International Space Station Search:
 
+![mock_search](iss_search_example.png)
 
 ## Future Iterations
 Currently in development: are a calendar mailer that will send an email with upcoming viewing times for celestial bodies, weather forecasts to improve the chances of users spotting their favorite planet, and additions of near Earth objects and other trackable telescope-viewable celestial bodies to our database.
@@ -21,6 +22,8 @@ Currently in development: are a calendar mailer that will send an email with upc
 What do you do when the API that you planned your entire project around is no longer in service? You build your own open source Microservice to provide the API endpoints that you need. Using an impressive dataset provided by **Jet Propulsion Laboratory**, combined with a **Skyfield - Python** package that performs the orbital mechanic calculations required to find the apparent locations of celestial bodies  - we were able to build out a stand alone Python application which delivers the information that we consume by our **Space In Your Face** Rails application.
 
 #### How To Use:
+
+![mock_search](skyfield_json_postnman.png)
 
 Endpoint for Celestial Bodies:\
 `https://skyfield-json.herokuapp.com/ephemerides?`
@@ -78,6 +81,9 @@ el: "47deg 14' 04.0""
 For our successful demonstration and proof of concept, we built a Flask app on a RaspberryPi 3 and exposed that application through an Ngrok tunneling service so that our deployed application could be reused with any similiar setup. Our telescope adjustments were made by stepper motors and custom 3D printed parts. Special thanks go to [Ian Douglas](https://github.com/iandouglas) for 3D printing and hardware integration support.
 
 ## Getting Set up
+
+You will need to have Ruby 2.4.1 and Rails 5.2 installed to your ruby environment.
+
 ```
 $ git clone git@github.com:Matt-Weiss/spaceinyourface.git
 $ bundle update

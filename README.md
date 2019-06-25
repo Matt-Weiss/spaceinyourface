@@ -38,41 +38,44 @@ A successful request will have a URL which looks like this: \
 `https://skyfield-json.herokuapp.com/ephemerides?longitude=41_W&latitude=41_N&bodies=mercury,venus,mars,jupiter`
 
 #### Example JSON Output:
-```
-data: {
-latitude: "41.345 N",
-longitude: "41.112 W",
-time: "2019-05-27 15:52:18",
-celestial_bodies: [
+```json
 {
-name: "mercury",
-decimal_attributes: {
-ra: "4.778648664415373",
-dec: "23.67915462647844",
-az: "208.18889336319882",
-el: "70.52100842964909"
-},
-strf_attributes: {
-ra: "04h 46m 43.14s",
-dec: "+23deg 40' 45.0"",
-az: "208deg 11' 20.0"",
-el: "70deg 31' 15.6""
-}
-},
-{
-name: "venus",
-decimal_attributes: {
-ra: "2.8393006859993086",
-dec: "14.896838769797116",
-az: "243.60921355444862",
-el: "47.23444778722323"
-},
-strf_attributes: {
-ra: "02h 50m 21.48s",
-dec: "+14deg 53' 48.6"",
-az: "243deg 36' 33.2"",
-el: "47deg 14' 04.0""
-}
+	"data": {
+		"latitude": "41.345 N",
+		"longitude": "41.112 W",
+		"time": "2019-05-27 15:52:18",
+		"celestial_bodies": [{
+				"name": "mercury",
+				"decimal_attributes": {
+					"ra": "4.778648664415373",
+					"dec": "23.67915462647844",
+					"az": "208.18889336319882",
+					"el": "70.52100842964909"
+				},
+				"strf_attributes": {
+					"ra": "04h 46m 43.14s",
+					"dec": "+23deg 40' 45.0",
+					"az": "208deg 11' 20.0",
+					"el": "70deg 31' 15.6"
+				}
+			},
+			{
+				"name": "venus",
+				"decimal_attributes": {
+					"ra": "2.8393006859993086",
+					"dec": "14.896838769797116",
+					"az": "243.60921355444862",
+					"el": "47.23444778722323"
+				},
+				"strf_attributes": {
+					"ra": "02h 50m 21.48s",
+					"dec": "+14deg 53' 48.6",
+					"az": "243deg 36' 33.2",
+					"el": "47deg 14' 04.0"
+				}
+			}
+		]
+	}
 }
 ```
 

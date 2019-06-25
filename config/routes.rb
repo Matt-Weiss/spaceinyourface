@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   resources :iss_search, only: [:index, :new]
   get '/iss_alerts', to: 'iss_alerts#create'
 
+  get '/geocode', to: 'geocode#show'
+
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
 end

@@ -3,6 +3,10 @@ class IssSearchResultFacade
     @raw_location = iss_search_params['location']
   end
 
+  def mapbox_long_lat
+    mapbox_best_guess["center"]
+  end
+  
   def user_estimated_location
     mapbox_best_guess["place_name"]
   end
@@ -12,7 +16,7 @@ class IssSearchResultFacade
   end
 
   def next_rise_time
-    Time.parse(iss_data['start']).localtime
+    Time.parse(iss_data['start'])
   end
 
   def duration
@@ -38,7 +42,4 @@ class IssSearchResultFacade
       location.returned_locations["features"].first
     end
 
-    def mapbox_long_lat
-      mapbox_best_guess["center"]
-    end
 end

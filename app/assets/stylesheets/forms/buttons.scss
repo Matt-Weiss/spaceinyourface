@@ -1,0 +1,19 @@
+
+button, input[type="submit"], input[type="button"] {
+  font-size: 1em;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px auto !important;
+  text-transform: uppercase;
+
+  &:hover {
+    background: lightgrey;
+  }
+
+}
+
+input[type="tel"], input[type="text"], input[type="input-field"] {
+  border-radius: 0;
+  min-width: 200px;
+}

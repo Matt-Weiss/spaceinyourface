@@ -10,6 +10,8 @@ describe 'User can see search results' do
 
     stub_request(:get, "https://skyfield-json.herokuapp.com/")
       .to_return(status: 200, body: '') # This stub is for background worker to ping skyfield app
+
+    @image = "http://icons.iconarchive.com/icons/large-icons/large-weather/32/partly-cloudy-day-icon.png"
   end
 
   it 'When I submit a new search' do
@@ -41,16 +43,10 @@ describe 'User can see search results' do
     expect(current_path).to eq(search_index_path)
     expect(page).to have_content("My Location: 1331 17th Street, Denver, Colorado 80202, United States")
 
-    expect(page).to have_css("#search-time")
-
-    expect(page).to have_css(".celestial-body", count: 2)
-
-    within first ".celestial-body" do
-      expect(page).to have_link("Luna")
-      expect(page).to have_content("Azimuth")
-      expect(page).to have_content("Elevation")
-      expect(page).to have_content("Right Ascension")
-      expect(page).to have_content("Declination")
-    end
+    expect(page.all('ul')[0]).to have_content('05 PM')
+    expect(page.all('ul')[0]).to have_css("img[src*='#{@image}']")
+    expect(page.all('ul')[0]).to have_content('Temperature: 75°')
+    expect(page.all('ul')[0]).to have_content('Cloud Coverage: 32%')
+    expect(page.all('ul')[0]).to have_content('Chance of Rain: 1%')
   end
 end

@@ -1,7 +1,7 @@
-class PingSkyfieldJob < ApplicationJob
-  queue_as :default
+class PingSkyfieldJob
+  include Sidekiq::Worker
 
   def perform
-     Faraday.get 'https://skyfield-json.herokuapp.com/'
+    Faraday.get 'https://skyfield-json.herokuapp.com/'
   end
 end

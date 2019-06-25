@@ -1,0 +1,45 @@
+
+.check-box {
+  position: relative;
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  color: white;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+// lets click events pass through the label (text and :before)
+input[type="checkbox"] + label {
+  pointer-events: none;
+}
+
+// this is what needs to recieve the user's click to register
+// the option has been selected.
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  -webkit-appearance: none;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  margin: 0;
+}
+
+// build the checkbox graphic
+input[type="checkbox"] + label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  border: grey solid 2px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: greenyellow;
+}

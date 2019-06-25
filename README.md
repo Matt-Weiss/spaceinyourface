@@ -8,23 +8,11 @@ SIYF is a group effort originating during Module 3 at Turing School of Software 
 
 
 #### Celestial Body Search:
-```
-INSERT SCREEN SHOT INSTEAD
-  Name: "Mercury"
-  Time: "2019-05-27 15:52:18"
-    decimal_attributes: {
-    ra: "4.778648664415373",
-    dec: "23.67915462647844",
-    az: "208.18889336319882",
-    el: "70.52100842964909"
-```
+
+![mock_search](search_example.png)
 
 #### International Space Station Search:
-```
 
-GET SCREENSHOT
-
-```
 
 ## Future Iterations
 Currently in development: are a calendar mailer that will send an email with upcoming viewing times for celestial bodies, weather forecasts to improve the chances of users spotting their favorite planet, and additions of near Earth objects and other trackable telescope-viewable celestial bodies to our database.

@@ -23,6 +23,12 @@ class SearchResultsFacade
     skyfield_data.body_data['data']['time']
   end
 
+  def weather
+    darksky_data.hourly.map do |hour|
+      Weather.new(hour)
+    end[0..4]
+  end
+
   private
 
   def location
@@ -39,5 +45,9 @@ class SearchResultsFacade
 
   def skyfield_data
     @_skyfield_data ||= SkyfieldService.new(mapbox_long_lat, @bodies, "ephemerides")
+  end
+
+  def darksky_data
+    @_darksky_service ||= DarkskyService.new(mapbox_best_guess)
   end
 end

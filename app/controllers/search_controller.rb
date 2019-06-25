@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def new
-    PingSkyfieldJob.perform_now
+    PingSkyfieldJob.perform_async
   end
 
   def index
@@ -16,6 +16,7 @@ class SearchController < ApplicationController
 
   def search_params
     if valid_search?
+      session[:location] = params[:location]
       params.permit(:location, :button, bodies:[])
     else
       render :new
@@ -26,10 +27,10 @@ class SearchController < ApplicationController
     if valid_bodies? && valid_location?
       true
     elsif !valid_bodies?
-      flash[:errors] = "Must select at least one celestial body"
+      flash.now[:errors] = "Must select at least one celestial body"
       false
     elsif !valid_location?
-      flash[:errors] = "Invalid location entry, please try again"
+      flash.now[:errors] = "Invalid location entry, please try again"
       false
     end
   end
@@ -47,6 +48,7 @@ class SearchController < ApplicationController
   def iss_search_params
     if valid_location?
       params.permit(:location, :button)
+
     else
       flash[:errors] = "Invalid location entry, please try again"
       render :new

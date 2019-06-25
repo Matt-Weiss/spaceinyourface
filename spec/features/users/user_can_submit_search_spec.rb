@@ -14,6 +14,10 @@ describe 'User can submit a search request' do
     json_search_index_response = File.open('./spec/fixtures/search_data.json')
     stub_request(:get, "https://skyfield-json.herokuapp.com/ephemerides?bodies=luna,mars&latitude=39.750772_N&longitude=104.996446_W")
       .to_return(status: 200, body: json_search_index_response)
+
+    json_darksky_response = File.open('./spec/fixtures/darksky_data.json')
+    stub_request(:get, "https://api.darksky.net/forecast/#{ENV['DARK_SKY_API']}/39.750772,-104.996446?exclude=currently,minutely,daily,alerts,flags")
+      .to_return(status: 200, body: json_darksky_response)
   end
 
   context 'When on the New Search Page' do
@@ -32,11 +36,12 @@ describe 'User can submit a search request' do
 
       expect(page).to have_selector(".location-field[placeholder='#{location_directions}']")
 
-      fill_in 'Location', with: '1331 17th St Denver, CO'
+      fill_in 'location', with: '1331 17th St Denver, CO'
 
       click_button "Search"
 
-      expect(current_url).to include("bodies[]=Luna&bodies[]=Mars&location=1331+17th+St+Denver%2C+CO")
+      expect(current_url).to include("bodies[]=Luna&bodies[]=Mars")
+      expect(current_url).to include("location=1331+17th+St+Denver%2C+CO")
       expect(current_path).to eq(search_index_path)
     end
   end
@@ -46,7 +51,7 @@ describe 'User can submit a search request' do
 
       visit new_search_path
 
-      fill_in 'Location', with: 80203
+      fill_in 'location', with: 80203
 
       click_button "Search"
 
@@ -82,7 +87,7 @@ describe 'User can submit a search request' do
       find(:css, "#bodies_[value='Luna']").set(true)
       find(:css, "#bodies_[value='Mars']").set(true)
 
-      fill_in 'Location', with: '80404'
+      fill_in 'location', with: '80404'
 
       click_button "Search"
 

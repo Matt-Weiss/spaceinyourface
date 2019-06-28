@@ -1,4 +1,4 @@
-# Space In Your Face
+# [Space In Your Face](https://spaceinyourface.herokuapp.com/)
 
 ## About
 
@@ -23,7 +23,7 @@ What do you do when the API that you planned your entire project around is no lo
 
 #### How To Use:
 
-![mock_search](skyfield_json_postnman.png)
+![mock_search](skyfield_json_postman.png)
 
 Endpoint for Celestial Bodies:\
 `https://skyfield-json.herokuapp.com/ephemerides?`
